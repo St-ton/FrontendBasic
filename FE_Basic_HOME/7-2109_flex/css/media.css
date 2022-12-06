@@ -1,0 +1,101 @@
+@media (max-width: 1200px) {
+  html,
+  body {
+    height: 100vh;
+  }
+  aside {
+    transform: translateX(calc(var(--aside-width) * -1));
+    height: 100vh;
+  }
+  .panel {
+    display: none;
+  }
+  .inbox {
+    width: 250px;
+    padding: 5px 10px;
+  }
+  .inbox__user-name {
+    font-size: 0.9rem;
+  }
+  .inbox__user-job {
+    font-size: 0.5rem;
+  }
+  .inbox__user-descr {
+    font-size: 0.5rem;
+  }
+  .user__avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .inbox__item {
+    height: 80px;
+  }
+  .inbox__switcher {
+    margin-bottom: 20px;
+  }
+  main {
+    /* display: block; */
+    margin-left: 0;
+    width: 100%;
+  }
+  .chat {
+    /* width: calc(100% - var(--inbox-width) - var(--panel-width)); */
+    width: 100%;
+  }
+  .burger {
+    display: inline;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    border: none;
+    padding: 7px 0px;
+    font-size: 1.5rem;
+    border-radius: 0 25% 25% 0;
+    background: var(--hover-blue);
+    color: white;
+    z-index: 3;
+  }
+
+  .menu--open {
+    transform: none;
+    width: var(--aside-width);
+    z-index: 3;
+  }
+
+  .burger--open {
+    transform: translateX(var(--aside-width));
+    z-index: 3;
+  }
+}
+@media (max-width: 768px) {
+  .inbox {
+    /* display: none; */
+    transform: translateX(768px);
+  }
+
+  .burger-inbox {
+    display: inline;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    border: none;
+    padding: 7px 3px 7px 0;
+    font-size: 1.5rem;
+    border-radius: 25% 0 0 25%;
+    background: var(--hover-blue);
+    color: white;
+    z-index: 3;
+  }
+  .inbox--open {
+    display: inline;
+    /* right: 0; */
+    transform: translateX(568px);
+    width: var(--inbox-width);
+    z-index: 3;
+  }
+
+  .burger-inbox--open {
+    transform: translateX(calc(var(--inbox-width) * -1));
+    z-index: 3;
+  }
+}

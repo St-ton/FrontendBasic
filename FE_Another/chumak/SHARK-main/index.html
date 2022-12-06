@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./shark.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <title>Shark App</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="burger" onclick="toggleMenu()">
+        <div class="burger__line "></div>
+        <div class="burger__line "></div>
+        <div class="burger__line "></div>
+    </div>
+
+    <div class="wrapper">
+
+        <aside class="sidebar p-30 pr-0">
+
+            <header class="sidebar__header mb-30">
+                <i class="sidebar__icon las la-cube"></i>
+                <h2 class="sidebar__title">Shark</h2>
+            </header>
+
+            <nav class="nav">
+                <ul class="nav__list">
+
+                    <li class="nav__itom">
+                        <a class="nav__link" href="#">
+                            <i class="nav__icon las la-sticky-note"></i>
+                            <span class="nav__text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__itom">
+                        <a class="nav__link" href="#">
+                            <i class="nav__icon las la-chart-bar"></i>
+                            <span class="nav__text">Statistic</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__itom">
+                        <a class="nav__link" href="#">
+                            <i class="nav__icon las la-phone"></i>
+                            <span class="nav__text">Support</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__itom">
+                        <a class="nav__link nav__link-active" href="#">
+                            <i class="nav__icon las la-inbox"></i>
+                            <span class="nav__text">Inbox</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__itom">
+                        <a class="nav__link" href="#">
+                            <i class="nav__icon las la-bullseye"></i>
+                            <span class="nav__text">Goals</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__itom">
+                        <a class="nav__link" href="#">
+                            <i class="nav__icon las la-link"></i>
+                            <span class="nav__text">Links</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="projects pr-30">
+                <h3 class="projects__title">projects</h3>
+                <ul class="projects__list">
+
+                    <li class="projects__itom">
+                        <a class="projects__link" href="#">
+                            <div class="projects__icon  projects__icon-red"></div>
+                            <span class="projects__text">Dashboard</span>
+                        </a>
+                        <div class="projects__counter">+4</div>
+                    </li>
+
+                    <li class="projects__itom">
+                        <a class="projects__link" href="#">
+                            <div class="projects__icon projects__icon-blue"></div>
+                            <span class="projects__text">Dashboard</span>
+                        </a>
+                        <div class="projects__counter">+4</div>
+                    </li>
+
+                    <li class="projects__itom">
+                        <a class="projects__link" href="#">
+                            <div class="projects__icon  projects__icon-violet"></div>
+                            <span class="projects__text">Dashboard</span>
+                        </a>
+                        <div class="projects__counter">+4</div>
+                    </li>
+
+                    <li class="projects__itom">
+                        <a class="projects__link" href="#">
+                            <div class="projects__icon projects__icon-green"></div>
+                            <span class="projects__text">Dashboard</span>
+                        </a>
+                        <div class="projects__counter">+4</div>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <button class="button mr-30">
+                Show More
+            </button>
+
+        </aside>
+
+        <main class="inbox px-30 pt-30">
+
+            <header class="inbox__header mb-30">
+
+                <h2 class="inbox__title">
+                    Inbox
+                </h2>
+
+                <button class="inbox__button button">
+                    +
+                </button>
+
+
+            </header>
+
+            <div class="inbox__toggle toggle">
+
+                <button class="toggle__button toggle__active">
+                    General
+                </button>
+
+                <button class="toggle__button">
+                    Total
+                </button>
+
+            </div>
+
+            <div class="inbox__contacts contactbox pt-30">
+
+                <div class="contactbox__card">
+
+                    <figure class="contactbox__avatar user-online">
+                        <img src="https://www.kino-teatr.ru/acter/album/39441/pv_36341.jpg" alt="">
+                    </figure>
+
+                    <div class="contactbox__info">
+                        <h4 class="contactbox__uname">
+                            Julia Roberts
+                        </h4>
+
+                        <p class="contactbox__position">
+                            Project manager
+                        </p>
+
+                        <p class="contactbox__msg">
+                            Sent you the file
+                        </p>
+                    </div>
+
+                    <div class="contactbox__unread">
+                        5
+                    </div>
+
+                </div>
+
+                <div class="contactbox__card">
+
+                    <figure class="contactbox__avatar">
+                        <img src="http://sundaynews.info/uploads/posts/2017-04/1492106140_andzhelina-dzholi-sobralas-zamuzh-za-britanskogo-milliardera.jpg"
+                            alt="">
+                    </figure>
+
+                    <div class="contactbox__info">
+                        <h4 class="contactbox__uname">
+                            Angelina Jolie
+                        </h4>
+
+                        <p class="contactbox__position">
+                            Project manager
+                        </p>
+
+                        <p class="contactbox__msg">
+                            See you tomorrow
+                        </p>
+                    </div>
+
+                    <div class="contactbox__unread">
+                        2
+                    </div>
+
+                </div>
+
+                <div class="contactbox__card">
+
+                    <figure class="contactbox__avatar user-online">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF3fOozW6E46AN8WqRdVsBOnFDUZ0N8WSBjg&usqp=CAU"
+                            alt="">
+                    </figure>
+
+                    <div class="contactbox__info">
+                        <h4 class="contactbox__uname">
+                            Michael.B
+                        </h4>
+
+                        <p class="contactbox__position">
+                            Project manager
+                        </p>
+
+                        <p class="contactbox__msg">
+                            Sent you the file
+                        </p>
+                    </div>
+
+                    <div class="contactbox__unread">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="contactbox__card">
+
+                    <figure class="contactbox__avatar">
+                        <img src="https://static-cdn4.vigbo.tech/u42021/61038/blog/4713491/3752858/47844734/500-borislav_ardev_fotograf_moskva_fotosessii_borkins-01b17d633ebd1151d146c5fd9db19022.jpg"
+                            alt="">
+                    </figure>
+
+                    <div class="contactbox__info">
+                        <h4 class="contactbox__uname">
+                            Michael.B
+                        </h4>
+
+                        <p class="contactbox__position">
+                            Project manager
+                        </p>
+
+                        <p class="contactbox__msg">
+                            Sent you the file
+                        </p>
+                    </div>
+
+                    <div class="contactbox__unread">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="contactbox__card">
+
+                    <figure class="contactbox__avatar">
+                        <img src="http://izosimov72.ru/wp-content/uploads/2018/07/20160312_8299_color.jpg"
+                            alt="">
+                    </figure>
+
+                    <div class="contactbox__info">
+                        <h4 class="contactbox__uname">
+                            Michael.B
+                        </h4>
+
+                        <p class="contactbox__position">
+                            Project manager
+                        </p>
+
+                        <p class="contactbox__msg">
+                            Sent you the file
+                        </p>
+                    </div>
+
+                    <div class="contactbox__unread">
+                        1
+                    </div>
+
+                </div>
+
+                <div class="contactbox__card">
+
+                    <figure class="contactbox__avatar">
+                        <img src="https://static-cdn5.vigbo.tech/u5628/5912/blog/4994118/4643870/60125398/1000-Maria_Aksionova-5a9e155139b29c0fd7950cc1b9a719fa.jpg"
+                            alt="">
+                    </figure>
+
+                    <div class="contactbox__info">
+                        <h4 class="contactbox__uname">
+                            Michael.B
+                        </h4>
+
+                        <p class="contactbox__position">
+                            Project manager
+                        </p>
+
+                        <p class="contactbox__msg">
+                            Sent you the file
+                        </p>
+                    </div>
+
+                    <div class="contactbox__unread">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="contactbox__card">
+
+                    <figure class="contactbox__avatar">
+                        <img src="https://godnik.pro/system/images/W1siZiIsIjIwMTYvMTIvMjUvNm9tbGIyOXN1ZF9fQUFWMTQyNy5qcGciXSxbInAiLCJ0aHVtYiIsIjU2NXg4NDcjIl1d/_AAV1427.jpg?sha=a2ff0ce6d848702a"
+                            alt="">
+                    </figure>
+
+                    <div class="contactbox__info">
+                        <h4 class="contactbox__uname">
+                            Michael.B
+                        </h4>
+
+                        <p class="contactbox__position">
+                            Project manager
+                        </p>
+
+                        <p class="contactbox__msg">
+                            Sent you the file
+                        </p>
+                    </div>
+
+                    <div class="contactbox__unread">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="contactbox__card">
+
+                    <figure class="contactbox__avatar user-online">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNGA7lgwue21a9g7GI2X3IGurIZxVhzBWVhg&usqp=CAU"
+                            alt="">
+                    </figure>
+
+                    <div class="contactbox__info">
+                        <h4 class="contactbox__uname">
+                            Michael.B
+                        </h4>
+
+                        <p class="contactbox__position">
+                            Project manager
+                        </p>
+
+                        <p class="contactbox__msg">
+                            Sent you the file
+                        </p>
+                    </div>
+
+                    <div class="contactbox__unread">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="contactbox__card ">
+
+                    <figure class="contactbox__avatar">
+                        <img src="http://sundaynews.info/uploads/posts/2017-04/1492106140_andzhelina-dzholi-sobralas-zamuzh-za-britanskogo-milliardera.jpg"
+                            alt="">
+                    </figure>
+
+                    <div class="contactbox__info">
+                        <h4 class="contactbox__uname">
+                            Michael.B
+                        </h4>
+
+                        <p class="contactbox__position">
+                            Project manager
+                        </p>
+
+                        <p class="contactbox__msg">
+                            Sent you the file
+                        </p>
+                    </div>
+
+                    <div class="contactbox__unread">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="contactbox__card ">
+
+                    <figure class="contactbox__avatar">
+                        <img src="http://sundaynews.info/uploads/posts/2017-04/1492106140_andzhelina-dzholi-sobralas-zamuzh-za-britanskogo-milliardera.jpg"
+                            alt="">
+                    </figure>
+
+                    <div class="contactbox__info">
+                        <h4 class="contactbox__uname">
+                            Michael.B
+                        </h4>
+
+                        <p class="contactbox__position">
+                            Project manager
+                        </p>
+
+                        <p class="contactbox__msg">
+                            Sent you the file
+                        </p>
+                    </div>
+
+                    <div class="contactbox__unread">
+                        0
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <section class="chat">
+
+            <header class="chat__header">
+
+                <div class="chat__contact">
+
+                    <figure id="chat__avatar">
+                    </figure>
+
+                    <div class="chat__info">
+                        <h4 class="chat__uname" id="chat-uname">
+                            Michael.B
+                        </h4>
+                        <p class="chat__isonline" id="chat-isonline">
+                            Online
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="chat__menu">
+                    <button class="chat__button button contactmenu" onclick="contactMenu()">
+                        <i class="las la-angle-left"></i>
+                    </button>
+                    <div class="chat__search">
+                        <input type="text" class="chat__input" placeholder="Search">
+                        <i class="las la-search chat__icon"></i>
+                    </div>
+
+                    <button class="chat__button button">
+                        <i class="las la-microphone"></i>
+                    </button>
+
+                    <button class="chat__button button">
+                        <i class="las la-medal"></i>
+                    </button>
+                </div>
+
+
+
+            </header>
+
+            <div class="chat__dialog dialog">
+
+                <time class="dialog__date">
+                    July 29, Tuesday
+                </time>
+
+                <div class="dialog__msg dialog__msg-sent">
+
+                    <time class="dialog__time">
+                        12:25
+                    </time>
+                    <div class="dialog__text">
+                        <div class="dialog__item">
+                            Hello!
+                        </div>
+                        <div class="dialog__item">
+                            Did you see my last message?
+                        </div>
+                    </div>
+                    <div class="dialog__status">
+                        VIEVED AT
+                    </div>
+
+                </div>
+
+                <div class="dialog__msg dialog__msg-received">
+
+                    <time class="dialog__time">
+                        12:25
+                    </time>
+                    <div class="dialog__text">
+                        <div class="dialog__item">
+                            Hello!
+                        </div>
+                        <div class="dialog__item">
+                            Did you see my last message?
+                        </div>
+                    </div>
+                    <div class="dialog__status">
+                        VIEVED AT
+                    </div>
+
+                </div>
+
+                <div class="dialog__msg dialog__msg-sent">
+
+                    <time class="dialog__time">
+                        12:25
+                    </time>
+                    <div class="dialog__text">
+                        <div class="dialog__item">
+                            Hello!
+                        </div>
+                        <div class="dialog__item">
+                            Did you see my last message?
+                        </div>
+                    </div>
+                    <div class="dialog__status">
+                        VIEVED AT
+                    </div>
+
+                </div>
+
+                <time class="dialog__date">
+                    July 29, Tuesday
+                </time>
+
+                <div class="dialog__msg dialog__msg-received">
+
+                    <time class="dialog__time">
+                        12:25
+                    </time>
+                    <div class="dialog__text">
+                        <div class="dialog__item">
+                            Hello!
+                        </div>
+                        <div class="dialog__item">
+                            Did you see my last message?
+                        </div>
+                    </div>
+                    <div class="dialog__status">
+                        VIEVED AT
+                    </div>
+
+                </div>
+
+                <div class="dialog__msg dialog__msg-sent">
+
+                    <time class="dialog__time">
+                        12:25
+                    </time>
+                    <div class="dialog__text">
+                        <div class="dialog__item">
+                            Hello!
+                        </div>
+                        <div class="dialog__item">
+                            Did you see my last message?
+                        </div>
+                    </div>
+                    <div class="dialog__status">
+                        VIEVED AT
+                    </div>
+
+                </div>
+
+                <div class="dialog__msg dialog__msg-received">
+
+                    <time class="dialog__time">
+                        12:25
+                    </time>
+                    <div class="dialog__text">
+                        <div class="dialog__item">
+                            Hello!
+                        </div>
+                        <div class="dialog__item">
+                            Did you see my last message?
+                        </div>
+                    </div>
+                    <div class="dialog__status">
+                        VIEVED AT
+                    </div>
+
+                </div>
+
+            </div>
+
+            <footer class="chat__typing typing">
+                <input type="text" class="typing__input" placeholder="Write a massege...">
+
+                <button class="typing__button button">
+                    <i class="las la-image"></i>
+                </button>
+
+                <button class="typing__button button">
+                    <i class="las la-microphone"></i>
+                </button>
+
+                <button class="typing__button typing__button-violet button">
+                    <i class="las la-paper-plane"></i>
+                </button>
+            </footer>
+
+        </section>
+
+        <div class="panel py-30">
+            <div class="panel__head">
+                <button class="panel__button button">
+                    <i class="las la-ellipsis-h"></i>
+                </button>
+            </div>
+            <div class="panel__bottom">
+                <button class="panel__button button">
+                    <i class="las la-exclamation-circle"></i>
+                </button>
+                <button class="panel__button button">
+                    <i class="las la-bell-slash"></i>
+                </button>
+                <button class="panel__button button">
+                    <i class="las la-trash"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    function toggleMenu() {
+        let aside = document.querySelector('.sidebar');
+        let burger = document.querySelector('.burger');
+        let burger__line = document.querySelectorAll('.burger__line');
+
+
+
+        aside.classList.toggle('sidebar--open');
+        burger.classList.toggle('burger--open');
+        for (let i = 0; i < burger__line.length; i++) {
+            burger__line[i].classList.toggle('burger__line--open');
+        }
+
+
+    }
+
+    function contactMenu() {
+        let contactMenu = document.querySelector('.wrapper');
+
+        contactMenu.classList.remove('chat__back');
+    }
+
+
+
+
+
+
+
+    console.log(document.querySelector('.contactbox__avatar').innerHTML);
+
+
+
+
+
+    /*   Copy Avatar*/
+
+    (function () {
+        let contactbox = document.querySelectorAll('.contactbox__card');
+        let copyImgLink = document.querySelectorAll('.contactbox__avatar');
+        let copyName = document.querySelectorAll('.contactbox__uname');
+
+
+        let imgCopyed = document.querySelector('#chat__avatar');
+        let chat__isonline = document.querySelector('#chat-isonline');
+        let unameCopyed = document.querySelector('#chat-uname');
+
+
+        imgCopyed.innerHTML = copyImgLink[0].innerHTML;
+        unameCopyed.innerHTML = copyName[0].innerHTML;
+
+        if (copyImgLink[0].classList.contains("user-online")) {
+            imgCopyed.classList.add('user-online');
+            chat__isonline.innerHTML = "Online";
+        } else {
+            imgCopyed.classList.remove('user-online');
+            chat__isonline.innerHTML = "not Oline";
+        }
+
+        for (let i in contactbox) {
+            contactbox[i].onclick = function () {
+                // turn back to chat
+                let contactMenu = document.querySelector('.wrapper');
+                contactMenu.classList.add('chat__back');
+                // copy img to chat
+                imgCopyed.innerHTML = copyImgLink[i].innerHTML;
+                unameCopyed.innerHTML = copyName[i].innerHTML;
+                // copy status online or not 
+                if (copyImgLink[i].classList.contains("user-online")) {
+                    imgCopyed.classList.add('user-online');
+                    chat__isonline.innerHTML = "Online";
+                } else {
+                    imgCopyed.classList.remove('user-online');
+                    chat__isonline.innerHTML = "not Oline";
+
+                }
+
+
+                /*   Switcher menu*/
+
+                for (let j in contactbox) {
+                    contactbox[j].classList.remove('contactbox__card-selected');
+                    contactbox[i].classList.add('contactbox__card-selected');
+                };
+
+            }
+        }
+
+
+
+    })();
+
+
+    /*   Switcher inbox*/
+    (function () {
+
+        let button = document.querySelectorAll(".toggle__button");
+
+        for (let key in button) {
+            button[key].onclick = function () {
+                for (let i in button) {
+                    button[i].classList.remove('toggle__active');
+                    button[key].classList.add('toggle__active');
+                };
+
+            }
+        };
+
+    })();
+
+
+    /*   Switcher aside*/
+
+    (function () {
+
+        let navLink = document.querySelectorAll(".nav__link");
+
+        for (let key in navLink) {
+            navLink[key].onclick = function () {
+                for (let i in navLink) {
+                    navLink[i].classList.remove('nav__link-active');
+                    navLink[key].classList.add('nav__link-active');
+                };
+
+
+            }
+        };
+
+    })();
+
+
+    /*-COntact Status*/
+
+    (function () {
+
+        let contactbox__unread = document.querySelectorAll('.contactbox__unread');
+        let contactbox__card = document.querySelectorAll('.contactbox__card');
+
+        for (let key in contactbox__unread) {
+            if (contactbox__unread[key].innerHTML != 0) {
+                contactbox__card[key].classList.add('contactbox__card-unread')
+            } else {
+                contactbox__card[key].classList.remove('contactbox__card-unread')
+            }
+        };
+
+    })();
+
+    // ------------
+</script>
+
+</html>

@@ -1,0 +1,45 @@
+html, body {
+  margin: 0;  
+
+}
+div {
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  gap: 10px;
+  padding: 10px;    
+  text-transform: uppercase;
+  
+}
+
+.block1 {
+width: 100%;
+height: calc(20% - 10px);
+/* height: 20%; */
+background: lightblue;
+}
+.block2 {
+  width: calc(70% - 10px);
+    height: 60%;
+  background: lightcoral;
+  
+  /* padding: 2 rem;
+  font-weight: 600;
+color: white;  
+display: flex;
+align-items: flex-end; */
+}
+.block3 {
+  width: 30%;
+  height: 60%;
+  background: lightgreen;
+}
+.block4 {
+width: 100%;
+height: calc(20% - 10px);
+/* height: 20%; */
+background: lightpink;
+}

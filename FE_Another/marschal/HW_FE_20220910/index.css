@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg: #f0f1fc;
+    --default-border-color: rgb(234, 232, 246);
+    --card-height: 225px;
+    --card-width: 380px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--main-bg);
+    height: 100vh;
+    width: 200px;
+    padding: 20px;
+    border-right: var(--default-border-color) 1px solid;
+}
+
+main {
+    margin-left: 200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--main-bg);
+    padding: 20px 40px;
+}
+
+.search {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding-left: .5rem;
+    border-radius: 4px;
+}
+
+.search__input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+span.search__icon {
+    font-size: 1.5rem;
+    color: #bebebe;
+    transform: rotateY(180deg);
+}
+
+.search__input::placeholder {
+    color: #bebebe;
+    font-weight: 500;
+}
+
+.button-icon {
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.button-icon:hover {
+    color: #4f316e;
+}
+
+.link {
+    text-decoration: none;
+    color: #a0a1aa;
+}
+
+.link--bold {
+    font-weight: 500;
+}
+
+.link--medium {
+    font-size: 1rem;
+}
+
+.user-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mr-4 {
+    margin-right: 1rem;
+}
+
+.mr-2 {
+    margin-right: .5rem;
+}
+
+.avatar {
+    border-radius: 6px;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+}
+
+.links *:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.menu__list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu__link {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    align-items: center;
+}
+
+.menu__icon--medium {
+    font-size: 1.5rem;
+}
+
+.menu__icon--small {
+    font-size: .7rem;
+}
+
+.menu__item-name {
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.menu__text {
+    display: flex;
+    align-items: center;
+}
+
+.cards {
+    height: var(--card-height);
+    background: var(--main-bg);
+    border-bottom: var(--default-border-color) 1px solid;
+    margin-bottom: calc(var(--card-height) * 0.5);
+
+    position: relative;
+}
+
+.cards__wrapper {
+    position: absolute;
+    width: 100%;
+    top: calc(var(--card-height) * 0.25);
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    height: var(--card-height);
+    width: var(--card-width);
+
+    border-radius: 30px;
+
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card--type1 {
+    background: linear-gradient(135deg, rgb(252, 237, 211), rgb(210, 212, 249));
+}
+
+.card--type2 {
+    background: linear-gradient(135deg, rgb(252, 240, 205), rgb(249, 226, 236));
+}
+
+.card--type3 {
+    background: linear-gradient(45deg, rgb(225, 252, 197), rgb(239, 253, 236));
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 40px;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.card__action {
+    color: gray;
+    font-size: 0.8em;
+}
+.card__action i {
+    font-size: 1.5em;
+}
+
+.card__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card__balance {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__amount {
+    margin: 0;
+    font-size: 2em;
+}
+
+.card__currency {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card__income {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__percent {
+    color: red;
+    font-size: 1.7em;
+    margin: 0 0 10px 0;
+}
+
+.card__summary {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card__primary-data {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.card__secondary-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__data h5 {
+    font-size: 0.6em;
+    color: gray;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+}
+
+.card__data h3 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.card__primary-data.card__data h3 {
+    font-size: 1.3em;
+}

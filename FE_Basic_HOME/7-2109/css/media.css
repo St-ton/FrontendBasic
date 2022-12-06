@@ -1,0 +1,135 @@
+@media (max-width: 992px) {
+  html,
+  body {
+    height: 100vh;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: var(--inbox-mob-width) auto var(--panel-width);
+    grid-template-areas: 'inbox main panel';
+    height: 100vh;
+  }
+  .menu {
+    position: fixed;
+    transform: translateX(calc(var(--aside-mob-width) * -1));
+    height: 100vh;
+    padding-left: 1.5rem;
+  }
+
+  .inbox {
+    width: var(--inbox-mob-width);
+    padding: 5px 10px;
+  }
+  .inbox__user-name {
+    font-size: 0.9rem;
+  }
+  .inbox__user-job {
+    font-size: 0.5rem;
+  }
+  .inbox__user-descr {
+    font-size: 0.5rem;
+  }
+  .user__avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .inbox__item {
+    height: 80px;
+  }
+  .inbox__switcher {
+    margin-bottom: 20px;
+  }
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+  .burger {
+    display: inline;
+    position: fixed;
+    top: 36%;
+    left: -1px;
+    border: none;
+    padding: 5px 1px;
+    font-size: 1.5rem;
+    border-radius: 0 25% 25% 0;
+    background: var(--hover-red);
+    color: white;
+    z-index: 3;
+    box-shadow: 2px 2px var(--gray-dark);
+  }
+  .burger--open {
+    transform: translateX(var(--aside-mob-width));
+    z-index: 3;
+  }
+  .menu--open {
+    transform: none;
+    width: var(--aside-mob-width);
+    z-index: 3;
+  }
+}
+@media (max-width: 768px) {
+  /* html,
+  body {
+    height: 100vh;
+  } */
+  /* .panel {
+    display: none;
+  } */
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto var(--panel-width);
+    grid-template-areas: 'main panel';
+    height: 100vh;
+  }
+
+  .inbox {
+    position: fixed;
+    transform: translateX(calc(var(--inbox-mob-width) * -1));
+    height: 100vh;
+  }
+
+  .burger2 {
+    display: inline;
+    position: fixed;
+    top: 27%;
+    left: 0;
+    border: none;
+    padding: 5px 2px;
+    font-size: 1.5rem;
+    border-radius: 0 25% 25% 0;
+    background: var(--hover-blue);
+    color: white;
+    z-index: 3;
+    box-shadow: 2px 2px var(--gray-dark);
+  }
+
+  .inbox--open {
+    transform: none;
+    width: var(--inbox-mob-width);
+    z-index: 2;
+  }
+
+  .burger2--open {
+    transform: translateX(var(--inbox-mob-width));
+    z-index: 3;
+  }
+
+  @media (max-width: 540px) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-areas: 'main';
+      height: 100vh;
+    }
+    .panel {
+      display: none;
+    }
+    .chat__search {
+      display: none;
+    }
+  }
+  @media (max-width: 480px) {
+  }
+}

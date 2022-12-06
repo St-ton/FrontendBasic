@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test Twittter App</title>
+        
+        <style>
+            body {
+  margin: 0;
+}
+
+.cards {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-evenly;
+}
+
+.card {
+  background: rgba(229, 221, 245, 0.63);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  border: 1px solid #d5d5bb;
+}
+
+.card_size_small {
+  width: 400px;
+}
+
+.card_size_large {
+  width: 600px;
+}
+
+.card__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+.card__name_important {
+  color: rgba(36, 20, 70, 0.8);
+}
+
+.card__name_size_large {
+  font-size: 2rem;
+}
+
+.card__message {
+  text-align: justify;
+}
+        </style>
+    </head>
+    <body>
+        <!-- БЭМ: Блок__Элемент_Модификатор[_ЗначениеМодификатора] -->
+
+        <div class="cards">
+            <div class="card card_size_small">
+                <div class="card__header">
+                    <div class="card__user">
+                        <img class="card__avatar" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                        <span class="card__datetime">Aug 23, 2022</span>
+                    </div>
+                    <h2 class="card__name">Ivanov Ivan</h2>
+                </div>
+                <div class="card__content">
+                    <p class="card__message">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet consequuntur cum
+                        deserunt
+                        dolore, ex explicabo iste itaque laudantium maxime mollitia nisi optio perferendis quibusdam
+                        quis
+                        reprehenderit sapiente tempore unde veniam voluptatibus! Beatae, nobis, tempore! A at dolor
+                        dolorem
+                        quae? Aperiam atque dicta distinctio impedit ipsam libero nostrum vero vitae?
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card_size_large">
+                <div class="card__header">
+                    <div class="card__user">
+                        <img class="card__avatar" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                        <span class="card__datetime">Aug 23, 2022</span>
+                    </div>
+                    <h2 class="card__name card__name_important card__name_size_large">Ivanov Ivan</h2>
+                </div>
+                <div class="card__content">
+                    <p class="card__message">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet consequuntur cum
+                        deserunt
+                        dolore, ex explicabo iste itaque laudantium maxime mollitia nisi optio perferendis quibusdam
+                        quis
+                        reprehenderit sapiente tempore unde veniam voluptatibus! Beatae, nobis, tempore! A at dolor
+                        dolorem
+                        quae? Aperiam atque dicta distinctio impedit ipsam libero nostrum vero vitae?
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card_size_small">
+                <div class="card__header">
+                    <div class="card__user">
+                        <img class="card__avatar" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                        <span class="card__datetime">Aug 23, 2022</span>
+                    </div>
+                    <h2 class="card__name card__name_size_large">Ivanov Ivan</h2>
+                </div>
+                <div class="card__content">
+                    <p class="card__message">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet consequuntur cum
+                        deserunt
+                        dolore, ex explicabo iste itaque laudantium maxime mollitia nisi optio perferendis quibusdam
+                        quis
+                        reprehenderit sapiente tempore unde veniam voluptatibus! Beatae, nobis, tempore! A at dolor
+                        dolorem
+                        quae? Aperiam atque dicta distinctio impedit ipsam libero nostrum vero vitae?
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card_size_small">
+                <div class="card__header">
+                    <div class="card__user">
+                        <img class="card__avatar" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                        <span class="card__datetime">Aug 23, 2022</span>
+                    </div>
+                    <h2 class="card__name">Ivanov Ivan</h2>
+                </div>
+                <div class="card__content">
+                    <p class="card__message">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet consequuntur cum
+                        deserunt
+                        dolore, ex explicabo iste itaque laudantium maxime mollitia nisi optio perferendis quibusdam
+                        quis
+                        reprehenderit sapiente tempore unde veniam voluptatibus! Beatae, nobis, tempore! A at dolor
+                        dolorem
+                        quae? Aperiam atque dicta distinctio impedit ipsam libero nostrum vero vitae?
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card_size_small">
+                <div class="card__header">
+                    <div class="card__user">
+                        <img class="card__avatar" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                        <span class="card__datetime">Aug 23, 2022</span>
+                    </div>
+                    <h2 class="card__name card__name_size_large">Ivanov Ivan</h2>
+                </div>
+                <div class="card__content">
+                    <p class="card__message">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet consequuntur cum
+                        deserunt
+                        dolore, ex explicabo iste itaque laudantium maxime mollitia nisi optio perferendis quibusdam
+                        quis
+                        reprehenderit sapiente tempore unde veniam voluptatibus! Beatae, nobis, tempore! A at dolor
+                        dolorem
+                        quae? Aperiam atque dicta distinctio impedit ipsam libero nostrum vero vitae?
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card_size_small">
+                <div class="card__header">
+                    <div class="card__user">
+                        <img class="card__avatar" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                        <span class="card__datetime">Aug 23, 2022</span>
+                    </div>
+                    <h2 class="card__name card__name_size_large">Ivanov Ivan</h2>
+                </div>
+                <div class="card__content">
+                    <p class="card__message">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet consequuntur cum
+                        deserunt
+                        dolore, ex explicabo iste itaque laudantium maxime mollitia nisi optio perferendis quibusdam
+                        quis
+                        reprehenderit sapiente tempore unde veniam voluptatibus! Beatae, nobis, tempore! A at dolor
+                        dolorem
+                        quae? Aperiam atque dicta distinctio impedit ipsam libero nostrum vero vitae?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

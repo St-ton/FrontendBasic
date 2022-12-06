@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --sidebar-width: 250px;
+    }
+
+    .sidebar {
+      width: var(--sidebar-width);
+      height: 100%;
+      background: grey;
+      position: fixed;
+      top: 0;
+      left: 0;
+      font-size: 2rem;
+      color: #fff;
+      transition: all 0.5s ease-out;
+    }
+
+    main {
+      margin-left: var(--sidebar-width);
+      padding: 2rem;
+    }
+
+    .burger {
+      display: none;
+      transition: all 0.5s ease-out;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(calc(var(--sidebar-width) * -1));
+      }
+
+      main {
+        margin: 0;
+      }
+
+      .burger {
+        display: inline;
+        position: fixed;
+        margin-top: 0;
+        bottom: 10vh;
+        border: none;
+        left: 0;
+        font-size: 2rem;
+        border-radius: 25%;
+        background: grey;
+        box-shadow: 3px 0px lightgrey;
+      }
+
+      .sidebar--open {
+        transform: none;
+      }
+
+      .burger--open {
+        transform: translateX(var(--sidebar-width));
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button class="burger" onclick="toggleMenu()">
+    +
+  </button>
+  <aside class="sidebar">menu items</aside>
+  <main class="main">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique earum laudantium aliquid quae libero dolorum est,
+    odit doloremque architecto officiis, laboriosam voluptatum vero molestiae reprehenderit non omnis atque accusantium
+    eos.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque adipisci deleniti commodi hic perferendis vitae
+    enim natus aperiam omnis ratione non nihil libero nostrum, est architecto molestias. Inventore, cum facilis!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam libero ea sequi nemo minima, ullam minus quod at
+    tempora impedit distinctio eum quae magni recusandae autem, dolorem cumque animi harum!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique earum laudantium aliquid quae libero dolorum est,
+    odit doloremque architecto officiis, laboriosam voluptatum vero molestiae reprehenderit non omnis atque accusantium
+    eos.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque adipisci deleniti commodi hic perferendis vitae
+    enim natus aperiam omnis ratione non nihil libero nostrum, est architecto molestias. Inventore, cum facilis!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam libero ea sequi nemo minima, ullam minus quod at
+    tempora impedit distinctio eum quae magni recusandae autem, dolorem cumque animi harum!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique earum laudantium aliquid quae libero dolorum est,
+    odit doloremque architecto officiis, laboriosam voluptatum vero molestiae reprehenderit non omnis atque accusantium
+    eos.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque adipisci deleniti commodi hic perferendis vitae
+    enim natus aperiam omnis ratione non nihil libero nostrum, est architecto molestias. Inventore, cum facilis!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam libero ea sequi nemo minima, ullam minus quod at
+    tempora impedit distinctio eum quae magni recusandae autem, dolorem cumque animi harum!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique earum laudantium aliquid quae libero dolorum est,
+    odit doloremque architecto officiis, laboriosam voluptatum vero molestiae reprehenderit non omnis atque accusantium
+    eos.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque adipisci deleniti commodi hic perferendis vitae
+    enim natus aperiam omnis ratione non nihil libero nostrum, est architecto molestias. Inventore, cum facilis!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam libero ea sequi nemo minima, ullam minus quod at
+    tempora impedit distinctio eum quae magni recusandae autem, dolorem cumque animi harum!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique earum laudantium aliquid quae libero dolorum est,
+    odit doloremque architecto officiis, laboriosam voluptatum vero molestiae reprehenderit non omnis atque accusantium
+    eos.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque adipisci deleniti commodi hic perferendis vitae
+    enim natus aperiam omnis ratione non nihil libero nostrum, est architecto molestias. Inventore, cum facilis!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam libero ea sequi nemo minima, ullam minus quod at
+    tempora impedit distinctio eum quae magni recusandae autem, dolorem cumque animi harum!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique earum laudantium aliquid quae libero dolorum est,
+    odit doloremque architecto officiis, laboriosam voluptatum vero molestiae reprehenderit non omnis atque accusantium
+    eos.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque adipisci deleniti commodi hic perferendis vitae
+    enim natus aperiam omnis ratione non nihil libero nostrum, est architecto molestias. Inventore, cum facilis!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam libero ea sequi nemo minima, ullam minus quod at
+    tempora impedit distinctio eum quae magni recusandae autem, dolorem cumque animi harum!
+  </main>
+  <script>
+    function toggleMenu()
+    {
+      var sidebar = document.querySelector('.sidebar');
+      var burger = document.querySelector('.burger');
+
+      sidebar.classList.toggle('sidebar--open');
+      burger.classList.toggle('burger--open');
+    }
+  </script>
+</body>
+
+</html>

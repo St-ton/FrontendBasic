@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Example</title>
+  <style>
+    /* .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 150px);
+      grid-template-rows: repeat(2, 150px);
+      gap: 10px; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-rows: repeat(2, 1fr); */
+    /* grid-template-columns: repeat(3, calc(100% / 3)); */
+    /* grid-template-rows: repeat(2, 50px); */
+    /* grid-template-columns: 50px 50px 50px 50px 50px 50px 50px; */
+    /* grid-template: 150px 150px 150px / 150px 150px; */
+    /* grid-auto-flow: columns;
+
+    }
+
+    .item {
+      background: gold;
+      font-size: 3rem;
+      text-align: center;
+
+    }
+
+    .item1 {
+      grid-column-start: 2;
+      grid-row-start: 2;
+    } */
+    html,
+    body,
+    .wrapper {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 350px auto;
+      grid-template-rows: 150px auto 150px;
+      grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer"
+      ;
+    }
+
+    header {
+      background: coral;
+      grid-area: header;
+    }
+
+    aside {
+      background: gold;
+      grid-area: aside;
+    }
+
+    main {
+      background: grey;
+      grid-area: main;
+    }
+
+    footer {
+      background: lightblue;
+      grid-area: footer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="wrapper">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div> -->
+  <div class="wrapper">
+    <header></header>
+    <aside></aside>
+    <main></main>
+    <footer></footer>
+
+  </div>
+  </div>
+</body>
+
+</html>

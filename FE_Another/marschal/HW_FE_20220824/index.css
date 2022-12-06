@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+.cards {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+.card {
+    background: rgba(229, 221, 245, 0.63);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    border: 1px solid #d5d5bb;
+}
+
+.card_size_small {
+    width: 400px;
+}
+
+.card_size_large {
+    width: 600px;
+}
+
+.card__header {
+}
+
+.card__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.card__name {
+}
+
+.card__name_important {
+    color: rgba(36, 20, 70, 0.8);
+}
+
+.card__name_size_large {
+    font-size: 2rem;
+}
+
+.card__message {
+    text-align: justify;
+}

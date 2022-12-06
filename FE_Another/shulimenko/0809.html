@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0%;
+        }
+
+        .side {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            width: 200px;
+            position: fixed;
+            background: #f9f9f9;
+        }
+
+        .side__logo {
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        .side__list {
+            padding: 0;
+        }
+
+        .side__list-ul {
+            list-style: none;
+            padding: 0;
+
+        }
+
+        .logout {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .link {
+            text-decoration: none;
+            color: #9c9c9c;
+        }
+
+        .link:hover {
+            color: black;
+        }
+
+        .link__out {
+            margin-left: -72px;
+        }
+
+        .side__list-li {
+            width: 157px;
+            display: flex;
+            color: #9c9c9c;
+            align-items: center;
+            padding-left: 35px
+        }
+
+        .side__list-li:hover,
+        .side__list-out:hover {
+            color: black;
+            border-left: solid black 2px;
+
+        }
+
+        .side__icon {
+            margin: 0 10px 0 0;
+            font-size: 1.5rem;
+        }
+
+        .side__icon-logo {
+            margin: 20px 10px 0 0;
+            font-size: 2rem;
+        }
+
+        .side__list-out {
+            display: flex;
+            color: #9c9c9c;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 35px 0 -20px;
+            width: 106px;
+
+            padding-left: 23px;
+
+        }
+
+        main {
+            margin-left: 200px;
+            width: 55%;
+            height: 100vh;
+            background: #ffffff;
+            border-right: solid #efefef 1px;
+        }
+
+        .user__avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .user {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .user__info {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .user__search {
+            display: flex;
+        }
+
+        .user__search-input {
+            width: 177px;
+            height: 30px;
+            color: #c1c1c1;
+            background-color: #f9f9f9;
+            border: none;
+            font-size: xx-small;
+        }
+
+        .user__search-icon {
+            height: 30px;
+            width: 30px;
+            font-size: 1.5rem;
+            background: black;
+            color: white;
+            transform: rotateY(180deg);
+            text-align: center;
+            align-content: center;
+        }
+
+        .user__id {
+            margin-left: 20px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .user__name {
+            margin-bottom: 0;
+        }
+
+        .user__place {
+            margin-top: 0;
+            color: #b3b3b3;
+        }
+
+        .courses {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 74px 0 74px;
+        }
+
+        .all {
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 20px
+        }
+
+        .all__text-black {
+            color: black;
+            font-weight: 600;
+        }
+
+        .all__text-grey {
+            color: #a1a1a1;
+            font-weight: 600;
+        }
+
+        .object {
+            height: 150px;
+            margin: 0 40px 10px 40px;
+            display: flex;
+            border: solid #f5f5f5 2px;
+        }
+
+        .object__pic-one {
+            width: 255px;
+            background: #1f3697;
+        }
+
+        .object__text {
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px 5px 20px;
+            width: 60%;
+        }
+
+        .object__text-firstline {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .object__text-prog {
+            font-weight: 600;
+            color: #909090;
+        }
+
+        .object__text-date {
+            margin-left: 20px;
+            font-weight: 600;
+            color: #909090;
+        }
+
+        .object-nonepic {
+            background: #03162b;
+            color: white;
+        }
+
+        .object__text-question {
+            width: 70%;
+        }
+
+        .object__pic-three {
+            width: 255px;
+            background: #cc70d8;
+        }
+        .object__pic-four {
+            width: 255px;
+            background:#ffc136;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="side">
+        <div>
+            <div class="side__logo">
+                <i class="lab la-staylinked side__icon-logo"></i>
+                <h1>memo</h1>
+            </div>
+            <nav class="side__list ">
+                <ul class="side__list-ul">
+                    <li class="side__list-li">
+                        <i class="lar la-copy side__icon"></i>
+                        <a href="" class="link">
+                            <h5>Courses</h5>
+                        </a>
+                    </li>
+                    <li class="side__list-li">
+                        <i class="lar la-credit-card side__icon"></i>
+                        <a href="" class="link">
+                            <h5>Payment</h5>
+                        </a>
+                    </li>
+                    <li class="side__list-li">
+                        <i class="las la-comment side__icon"></i>
+                        <a href="" class="link">
+                            <h5>Chat</h5>
+                        </a>
+                    </li>
+                    <li class="side__list-li">
+                        <i class="lar la-user side__icon"></i>
+                        <a href="" class="link">
+                            <h5>Groups</h5>
+                        </a>
+                    </li>
+                    <li class="side__list-li">
+                        <i class="las la-graduation-cap side__icon"></i>
+                        <a href="" class="link">
+                            <h5>Students</h5>
+                        </a>
+                    </li>
+                    <li class="side__list-li">
+                        <i class="las la-volume-down side__icon"></i>
+                        <a href="" class="link">
+                            <h5>Support</h5>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="side__list-out">
+
+            <i class="las la-sign-out-alt side__icon"></i>
+            <a href="" class="link">
+                <h5 class="link__out">Log out</h5>
+            </a>
+
+        </div>
+    </aside>
+    <main>
+        <header class="user">
+            <div class="user__info">
+                <img src="./image/avatar6.png" alt="" class="user__avatar">
+                <div class="user__id">
+                    <h3 class="user__name">Leslie Alexander</h3>
+                    <h5 class="user__place">Los Angeles, CA</h5>
+                </div>
+            </div>
+            <div class="user__search">
+                <input type="text" placeholder="Search" class="user__search-input">
+                <i class="las la-search user__search-icon"></i>
+            </div>
+        </header>
+        <section>
+            <div class="courses">
+                <h1 class="courses__text">Courses</h1>
+                <h6>See all</h6>
+            </div>
+            <div class="all">
+                <h5 class="all__text-black">All</h5>
+                <h5 class="all__text-grey">Current</h5>
+                <h5 class="all__text-grey">Pending</h5>
+                <h5 class="all__text-grey">Complited</h5>
+            </div>
+            <div class="object">
+                <div class="object__pic-one">
+
+                </div>
+                <div class="object__text">
+                    <div class="object__text-firstline">
+                        <h6 class="object__text-prog">Programming&emsp;&emsp;&bull;</h6>
+
+                        <h6 class="object__text-date">Okt 09.2022</h6>
+                    </div>
+                    <h3>Object-Oriented Programming in Java</h3>
+
+                </div>
+            </div>
+            <div class="object object-nonepic">
+                <div class="object__text">
+
+                    <h3 class="object__text-question">How to track your course progress easly?</h3>
+
+                    <div class="object__text-firstline">
+                        <h6>Find more</h6>
+                        <i class="las la-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="object">
+                <div class="object__pic-three">
+
+                </div>
+                <div class="object__text">
+                    <div class="object__text-firstline">
+                        <h6 class="object__text-prog">Design&emsp;&emsp;&bull;</h6>
+
+                        <h6 class="object__text-date">Sep 17.2022</h6>
+                    </div>
+                    <h3>Visual Elements of User Interface Design</h3>
+
+                </div>
+            </div>
+            <div class="object">
+                <div class="object__pic-four">
+
+                </div>
+                <div class="object__text">
+                    <div class="object__text-firstline">
+                        <h6 class="object__text-prog">Design&emsp;&emsp;&bull;</h6>
+
+                        <h6 class="object__text-date">Aug 19.2022</h6>
+                    </div>
+                    <h3>The Strategy of Content Marketing</h3>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <title>Document</title>
+  <style>
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: nowrap;  */
+  justify-content: center;
+  align-items:center;
+  
+}
+.actions {
+  /* display: inline-flex; */
+  display: flex;
+  flex-wrap: wrap;
+  background: lightgray;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 12px;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+button {
+  font-size: 1.5rem;
+  color: rgb(0,0,0);
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;  
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  box-shadow: 2px 2px 2px grey;
+}
+.button--red {
+    background: rgba(255,0,0,0.5);
+    
+  
+}
+.button--red:hover {
+    background: rgba(255,0,0,1);
+    box-shadow: none;
+  
+}
+.button--green {
+  background: rgba(0,255,6,0.5);
+}
+.button--green:hover {
+  background: rgba(0,255,6,1);
+  box-shadow: none;
+}
+.form {
+  display: flex;
+}
+  </style>
+</head>
+<body>
+  <!-- Блок__Элемент--Модификатор -->
+  <div class="actions">
+  <button class ="button button--red">
+    <i class="las la-trash-alt"></i>
+  </button>
+  <button class="button button--green">
+    <i class="lab la-paypal"></i>
+  </button>
+</div>
+  <div class="form">
+    <input type="text">
+  </div>
+
+</body>
+</html>

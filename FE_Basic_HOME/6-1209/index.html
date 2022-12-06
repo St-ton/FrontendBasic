@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!-- <html lang="en" contenteditable="true"> -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.css"
+    integrity="sha512-jBdqX97f10pO/bFp1piCJf43vrVhnQmx4TOCTdt+fvEJDonDQQVoPRcSQqBvcjYYnGHe3KdTmdUNijy36WXP5g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./media.css">
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <title>Projects</title>
+</head>
+
+<body>
+  <button class="burger" onclick="toggleMenu()">
+    +
+  </button>
+  <aside class="menu">
+    <figure class="logo">
+      <img src="./jpg/memo_logo.jpeg" alt="" class="logo__img">
+    </figure>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item nav__item--active">
+          <a class="nav__link" href="">
+            <span class="icon"><i class="lab la-discourse"> </i></span>
+            <span class="nav__text">Courses</span></a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="">
+            <span class="icon"><i class="las la-money-check-alt"></i></span>
+            <span class="nav__text">Payment</span></a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="">
+            <span class="icon"><i class="las la-comment"></i></span>
+            <span class="nav__text">Chat</span></a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="">
+            <span class="icon"><i class="las la-users"></i></span>
+            <span class="nav__text">Groups</span></a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="">
+            <span class="icon"><i class="las la-user-alt"></i></span>
+            <span class="nav__text">Students</span></a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="">
+            <span class="icon"><i class="las la-life-ring"></i></span>
+            <span class="nav__text">Support</span></a>
+        </li>
+      </ul>
+    </nav>
+    <button class="button">
+      <span class="icon"> <i class="las la-sign-out-alt"></i></span>Log out</button>
+  </aside>
+  <main>
+    <div class="user">
+      <div class="user__data">
+        <img src="./jpg/avatar.png" alt="" class="user__avatar">
+        <div class="user__info">
+          <h3 class="user__name">Leslie Alexander</h3>
+          <h4 class="user__city">Los Angeles, CA</h4>
+        </div>
+      </div>
+      <div class="user__search">
+        <input type="text" placeholder="Search" class="user__search-fild">
+        <div class="user__search-icon"><i class="las la-search"></i></div>
+      </div>
+    </div>
+    <section class="courses">
+      <div class="courses__title">
+        <h1 class="courses__subtitle">Courses</h1>
+        <h6 class="courses__subtitle">See all</h6>
+      </div>
+      <div class="courses__filters">
+        <h5 class="courses__filter courses__filter--active">All</h5>
+        <h5 class="courses__filter">Current</h5>
+        <h5 class="courses__filter">Pending</h5>
+        <h5 class="courses__filter">Complited</h5>
+      </div>
+      <div class="courses-list">
+        <div class="courses__item">
+          <img class="courses__img" src="./jpg/cours1.jpeg" alt="">
+          <div class="courses__wrp">
+            <h6 class="courses__date">Programming * Oct 09.2022</h6>
+            <h3 class="courses__desc">Object-Oriented Programming in Java</h3>
+          </div>
+        </div>
+        <div class="courses__item courses__item--none">
+          <div class="courses__wrp">
+            <h3 class="">How to track your course progress easly?</h3>
+            <h6 class="courses__desc">Find more<i class="las la-angle-right"></i></h6>
+          </div>
+        </div>
+        <div class="courses__item">
+          <img class="courses__img" src="./jpg/cours2.jpeg" alt="">
+          <div class="courses__wrp">
+            <h6 class="courses__date">Design * Sep 17.2022</h6>
+            <h3 class="courses__desc">Visual Elements of User Interface Design</h3>
+          </div>
+        </div>
+        <div class="courses__item">
+          <img class="courses__img" src="./jpg/cours3.jpeg" alt="">
+          <div class="courses__wrp">
+            <h6 class="courses__date">Design * Aug 19.2022</h6>
+            <h3 class="courses__desc">The Strategy of Content Marketing</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="aside-right">
+    <div class="shedule">
+      <h2 class="shedule__title">Schedule</h2>
+      <select name="month" class="shedule__month">
+        <option value="">Month</option>
+        <option value="">January</option>
+        <option value="">February</option>
+        <option value="">March</option>
+        <option value="">April </option>
+        <option value="">May</option>
+        <option value="">June</option>
+        <option value="">July</option>
+        <option value="">August</option>
+        <option value="">September</option>
+        <option value="">October</option>
+        <option value="">November</option>
+        <option value="">December</option>
+      </select>
+    </div>
+    <ul class="calendar">
+      <li class="calendar__item calendar__item--small">Sun</li>
+      <li class="calendar__item calendar__item--small">Mon</li>
+      <li class="calendar__item calendar__item--small">Tue</li>
+      <li class="calendar__item calendar__item--small">Wed</li>
+      <li class="calendar__item calendar__item--small">Thu</li>
+      <li class="calendar__item calendar__item--small">Fri</li>
+      <li class="calendar__item calendar__item--small">Sat</li>
+      <li class="calendar__item calendar__item--grey">27</li>
+      <li class="calendar__item calendar__item--grey">28</li>
+      <li class="calendar__item calendar__item--grey">29</li>
+      <li class="calendar__item calendar__item--grey">30</li>
+      <li class="calendar__item">1</li>
+      <li class="calendar__item">2</li>
+      <li class="calendar__item">3</li>
+      <li class="calendar__item">4</li>
+      <li class="calendar__item">5</li>
+      <li class="calendar__item">6</li>
+      <li class="calendar__item">7</li>
+      <li class="calendar__item">8</li>
+      <li class="calendar__item">9</li>
+      <li class="calendar__item">10</li>
+      <li class="calendar__item">11</li>
+      <li class="calendar__item">12</li>
+      <li class="calendar__item">13</li>
+      <li class="calendar__item">14</li>
+      <li class="calendar__item">15</li>
+      <li class="calendar__item">16</li>
+      <li class="calendar__item">17</li>
+      <li class="calendar__item">18</li>
+      <li class="calendar__item">19</li>
+      <li class="calendar__item calendar__item--active">20</li>
+      <li class="calendar__item">21</li>
+      <li class="calendar__item">22</li>
+      <li class="calendar__item">23</li>
+      <li class="calendar__item">24</li>
+      <li class="calendar__item">25</li>
+      <li class="calendar__item">26</li>
+      <li class="calendar__item">27</li>
+      <li class="calendar__item">28</li>
+      <li class="calendar__item">29</li>
+      <li class="calendar__item">30</li>
+      <li class="calendar__item">31</li>
+    </ul>
+    <div class="upcomming">
+      <div class="upcomming__title">
+        <h3>Upcomming</h3>
+        <h6>...</h6>
+      </div>
+      <div class="timeline">
+        <div class="lesson lesson--930h">
+          <img src="./jpg/page.png" alt="">
+          <div class="lesson__text">
+            <h6 class="lesson__times">09:30-10:00</h6>
+            <h5 class="lesson__descr">Object-Oriented Programming</h5>
+          </div>
+        </div>
+        <div class="lesson lesson--113h">
+          <img src="./jpg/page.png" alt="">
+          <div class="lesson__text">
+            <h6 class="lesson__times">11:30-12:00</h6>
+            <h5 class="lesson__descr">Visual Elements of User</h5>
+          </div>
+        </div>
+        <div class="lesson lesson--133h">
+          <img src="./jpg/page.png" alt="">
+          <div class="lesson__text">
+            <h6 class="lesson__times">13:30-14:00</h6>
+            <h5 class="lesson__descr">The Strategy of Content</h5>
+          </div>
+        </div>
+        <div class="timeline_item">
+          <div class="timeline__time">09:00</div>
+          <div class="timeline__line"></div>
+        </div>
+        <div class="timeline_item">
+          <div class="timeline__time">10:00</div>
+          <div class="timeline__line"></div>
+        </div>
+        <div class="timeline_item">
+          <div class="timeline__time">11:00</div>
+          <div class="timeline__line"></div>
+        </div>
+        <div class="timeline_item">
+          <div class="timeline__time">12:00</div>
+          <div class="timeline__line"></div>
+        </div>
+        <div class="timeline_item">
+          <div class="timeline__time">13:00</div>
+          <div class="timeline__line"></div>
+        </div>
+        <div class="timeline_item">
+          <div class="timeline__time">14:00</div>
+          <div class="timeline__line"></div>
+        </div>
+        <div class="timeline_item">
+          <div class="timeline__time">15:00</div>
+          <div class="timeline__line"></div>
+        </div>
+        <div class="timeline_item">
+          <div class="timeline__time">16:00</div>
+          <div class="timeline__line"></div>
+        </div>
+        <div class="timeline_item">
+          <div class="timeline__time">17:00</div>
+          <div class="timeline__line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function toggleMenu()
+    {
+      var menu = document.querySelector('.menu');
+      var burger = document.querySelector('.burger');
+
+      menu.classList.toggle('menu--open');
+      burger.classList.toggle('burger--open');
+
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<!-- 
+  Часть1
+  img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  }
+  .block {
+  border: 4px solid red;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  }
+  ближайщие соседи - элементы, находящиеся рядом и на однм уровне
+  img+p {
+  color: red;
+  }
+  любые соседи в одном блоке
+  img~p {
+  color: yellow;
+  }
+
+ Часть 2
+    :root {
+      --main-bg-color: rgb(251, 14, 239);
+      --text-color: rgb(255, 255, 2558);
+      --border: 5px solid black;
+    }
+
+    .block {
+      background: var(--main-bg-color);
+      height: 500px;
+      width: 500px;
+      border: var(--border);
+      color: var(--text-color);
+      font-size: 4rem;
+    } 
+    
+  <div class="block">©Some «</div>
+  <div class="block"></div>
+  -->
+
+  <style>
+img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+  </style>
+</head>
+
+<body>
+  <!--  блок__элемент--модификатор  -->
+  <div class="home"><a href="/index.html">HOME</a></div>
+  <article class ="card">
+  <figure class ="card__figure">
+    <img class ="card__img" src="" alt="">
+    <figcaption class ="card__caption card__caption--red">
+
+    </figcaption>
+  </figure>
+</article>
+
+</html>

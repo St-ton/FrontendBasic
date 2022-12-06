@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Example</title>
+  <style>
+    html,
+    body,
+    .wrapper {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 150px 280px auto 50px;
+      grid-template-rows: auto;
+      grid-template-areas: "aside inbox chat panel";
+    }
+
+    aside {
+      background: lightgray;
+      grid-area: aside;
+    }
+
+    .inbox {
+      background: lightblue;
+      grid-area: inbox;
+    }
+
+    .chat {
+      background: white;
+      grid-area: chat;
+      display: grid;
+      grid-template-row: 150px auto 150px;
+    }
+
+    .panel {
+      background: coral;
+      grid-area: panel;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="inbox"></div>
+    <div class="chat"></div>
+    <div class="panel"></div>
+
+  </div>
+  </div>
+</body>
+
+</html>

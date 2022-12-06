@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Example</title>
+  <style>
+    html,
+    body,
+    .wrapper {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 150px auto 150px;
+      grid-template-rows: 150px auto 200px;
+      grid-template-areas:
+        "aside header article"
+        "aside main article"
+        "aside footer article"
+      ;
+      gap: 10px;
+    }
+
+    header {
+      background: lightblue;
+      grid-area: header;
+    }
+
+    aside {
+      background: lightblue;
+      grid-area: aside;
+    }
+
+    main {
+      background: lightblue;
+      grid-area: main;
+    }
+
+    article {
+      background: lightblue;
+      grid-area: article;
+    }
+
+    footer {
+      background: lightblue;
+      grid-area: footer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header></header>
+    <aside></aside>
+    <main></main>
+    <article></article>
+    <footer></footer>
+
+  </div>
+  </div>
+</body>
+
+</html>

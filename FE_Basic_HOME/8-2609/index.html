@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Example</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: lightblue;
+
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .grid {
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20%;
+      grid-template-rows: 25% 25% 25%;
+      grid-template-areas:
+        "aside header header article1"
+        "aside main1 main2 article2"
+        "aside main3 main4 article2"
+      ;
+      gap: 10px;
+    }
+
+    aside {
+      background: green;
+      grid-area: aside;
+    }
+
+    header {
+      background: green;
+      grid-area: header;
+    }
+
+    main1 {
+      background: yellow;
+      grid-area: main1;
+    }
+
+    main2 {
+      background: red;
+      grid-area: main2;
+    }
+
+    main3 {
+      background: red;
+      grid-area: main3;
+    }
+
+    main4 {
+      background: yellow;
+      grid-area: main4;
+    }
+
+    article1 {
+      background: red;
+      grid-area: article1;
+    }
+
+    article2 {
+      background: green;
+      grid-area: article2;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>CSS GRID</h1>
+    <div class="grid">
+      <aside></aside>
+      <header></header>
+      <article1></article1>
+      <main1></main1>
+      <main2></main2>
+      <main3></main3>
+      <main4></main4>
+      <article2></article2>
+    </div>
+  </div>
+
+</body>
+
+</html>

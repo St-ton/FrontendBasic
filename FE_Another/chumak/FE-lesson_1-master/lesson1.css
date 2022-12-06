@@ -1,0 +1,1187 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    font-family: 'Arimo', sans-serif;
+    --bgSecondary: hsl(233, 100%, 98%);
+    --textcolor-violet: #51459f;
+    --textcolor-gray: #7e7e7e;
+    --textcolor-granit: #1a1a1a;
+    --textcolor-white: #fff;
+    --textcolor-orange: #fb896b;
+    --textcolor-turquoise: #18dfbe;
+}
+body, html{
+    height: 100%;
+}
+
+
+
+.container{
+    padding: 20px 40px;
+}
+
+.container-20{
+    padding: 20px;
+}
+
+
+.header{
+    min-height: 50px;
+}
+
+
+
+
+
+
+
+
+
+.burger{
+    display: none;
+}
+
+
+/* aside */
+
+aside{
+    width: 200px;
+    background-color: var(--bgSecondary);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+.aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.aside__header{
+    display: flex;
+    align-items: center;
+    color: var(--textcolor-violet);
+}
+.aside__icon{
+    font-size: 1.6rem;
+    margin-right: 10px;
+}
+.aside__title{
+    font-size: 14px;
+}
+
+.nav__title{
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: var(--textcolor-granit);
+    text-transform: capitalize;
+}
+.nav__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+}
+.nav__item:hover{
+    background-color: rgba(255, 255, 255, 0.726);
+}
+.nav__link{
+    display: flex;
+    align-items: center;
+}
+.nav__link i{
+    color: var(--textcolor-violet);
+    font-size: 20px;
+    margin-right: 10px;
+}
+.nav__text{
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--textcolor-gray);
+    text-transform: capitalize;
+}
+.nav__arrow{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 10px;
+}
+.nav-rotate{
+    transform: rotateZ(135deg);
+}
+
+
+.aside__help{
+    background: linear-gradient(70deg , #f9ede4 20% , #cccee2 100%) ;
+    width: 100%;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    position: relative;
+}
+.help{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    text-align: center;
+}
+.help__question{
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 25px);
+    top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px -10px #00000046
+    ,0 15px 20px -10px #00000030
+    ,0 20px 20px -11px #00000030
+    ,0 20px 30px -15px #00000030
+    ,0 25px 30px -15px #00000030
+    ,0 30px 30px -15px #00000030
+    ,0 35px 30px -15px #00000023
+    ,0 40px 30px -15px #00000020 ;
+}
+.help__icon{
+    background-color: var(--textcolor-orange);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: var(--textcolor-white);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.help__title{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.help__desc{
+    font-size: 12px;
+    color: var(--textcolor-gray);
+    margin-bottom: 15px;
+}
+.help__button{
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    line-height: 35px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main */
+
+       
+main{
+    /* width: calc(100% - 200px); */
+    margin-left: 200px;
+}
+
+             /* header  */  
+.main__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bgSecondary);
+}
+.main__search{
+    width: 25%;
+    background-color: #fff;
+    display: flex;
+    padding-left: .5rem;
+    align-items: center;
+    border-radius: 8px;
+}
+.main__search i{
+   font-size: 1.5rem;
+   color: var(--textcolor-gray);
+}
+.main__search input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.8rem;
+}
+.main__search input::placeholder{
+    font-weight: 800;
+    color: var(--textcolor-gray);
+}
+.main-icon{
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.main__icons>:not(:last-child){
+    margin-right: 10px;
+}
+.main-icon:hover{
+    color: #4c39c7;
+}
+
+.links *:not(:last-child){
+    margin-right: 2rem;
+}
+.link{
+    color: var(--textcolor-gray);
+    font-size: 14px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user__greetings{
+    margin-right: 1rem;
+    font-size: 14px;
+    color: var(--textcolor-granit);
+}
+.avatar{
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    background-color: orange;
+    border-radius: 7px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow: hidden;
+}
+.avatar__img{
+    width: 100%;
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+
+
+
+
+        /*article  */
+
+
+.bankcards::after{
+    content: " ";
+    width: 100%;
+    height: 60%;
+    background-color: var(--bgSecondary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+ }
+.bankcards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3%;
+    padding-bottom: 30px;
+    height: auto;
+    position: relative;
+}
+.bankcards__card{
+    border-radius: 10px;
+    width: calc(33% - 3%);
+    height: auto;
+    aspect-ratio: 1.8;
+    box-shadow: rgba(100, 100, 111, 0.075) 0px 7px 29px 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bankcards__title{
+    text-transform: capitalize;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.bankcars__info{
+    color: var(--textcolor-granit);
+}
+.bankcards__saving{
+    color: var(--textcolor-gray);
+    text-decoration: underline;
+    font-weight: bold;
+}
+.bankcardone__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.bankcardone__balance{
+    font-size: 24px;
+    font-weight: bold;
+    align-items: baseline;
+    text-transform: uppercase;
+}
+.bankcardone__currency{
+    font-size: 12px;
+    outline: none;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+}
+.bankcardone__currency:focus{
+    outline: none;
+    border: none;
+    background: none;
+}
+.bankcards__icon{
+    background-color: var(--textcolor-gray);
+    border-radius: 50%;
+    color: bisque;
+    width: 15px;
+    height: auto;
+    aspect-ratio: 1;
+    text-align: center;
+    line-height: 15px;
+}
+
+.bankcardtwo__footer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bankcardtwo__icon{
+    background-color: #f0bebe;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    color: rgb(201, 41, 20);
+    font-size: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+}
+.bankcardtwo__status{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.bankcardtwo__persent{
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(201, 41, 20);
+}
+.bankcardtwo__desc{
+    font-size: 12px;
+    font-weight: bold;
+}
+.bankcardthree__title{
+    font-size: 41px;
+}
+.bankcardthree__text{
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--textcolor-gray);
+}
+.bankcardthree__number{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+.bankcardthree__info{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.bankcardthree__info:first-child{
+    margin-bottom: 5px;
+}
+.bankcardthree__personal{
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Graphics */
+
+.transactions--borders{
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+.transactions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.transaction{
+    width: calc(33% - 3%);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.transaction__info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.transaction__title{
+    font-size: 12px;
+    color: var(--textcolor-granit);
+}
+.transaction__count{
+    font-size: 20px;
+    font-weight: bold;
+}
+.transaction__month{
+    font-size: 12px;
+    color: var(--textcolor-gray);
+}
+.gaph{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.graph__col{
+    background-color: #ccc;
+    width: 20px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* History payment */
+.history{
+  display: flex;
+  flex-wrap: wrap;
+}
+.history--60{
+    width: 60%;
+}
+.history--40{
+    width: 40%;
+}
+.history--bg-violet{
+    background-color: var(--bgSecondary);
+    border-radius: 15px;
+}
+
+.history__spend{
+
+}
+.history__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.history__title{
+    font-size: 15px;
+    color: var(--textcolor-granit);
+}
+.history__icons{
+    font-size: 1.5rem;
+    color: var(--textcolor-gray);
+    display: flex;
+    gap: 15px;
+}
+.history__period{
+    margin-bottom: 30px;
+}
+.history__date{
+    font-size: 12px;
+    color: var(--textcolor-gray);
+    margin-bottom: 20px;
+}
+
+.action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 5px;
+}
+.action_desc{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.action__icon{
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    background-color: #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.action__text{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.action__origin{
+    font-size: 14px;
+    color: var(--textcolor-granit);
+}
+.action__status{
+    font-size: 12px;
+    color: var(--textcolor-gray);
+}
+.action__money{
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MODIFICATORS------------------------------- */
+
+.bg-orange{
+    background-color: var(--textcolor-orange);
+}
+.bg-violet{
+    background-color: var(--textcolor-violet);
+}
+.bg-turquoise{
+    background-color: var(--textcolor-turquoise);
+}
+
+.text-orange{
+    color: var(--textcolor-orange);
+}
+.text-violet{
+    color: var(--textcolor-violet);
+}
+.text-turquoise{
+    color: var(--textcolor-turquoise);
+}
+.text-white{
+    color: #fff;
+}
+
+.color-negative{
+    color: rgb(167, 32, 32);
+}
+
+.col-blue{
+    background-color: rgb(185, 199, 218);
+}
+.col-yellow{
+    background-color: rgb(235, 221, 208);
+}
+.col-green{
+    background-color: rgb(189, 218, 185);
+}
+
+.border-r{
+    border-right: 2px solid #ccc;
+}
+.border-l{
+    border-left: 2px solid #ccc;
+}
+.border-t{
+    border-top: 2px solid #ccc;
+}
+.border-b{
+    border-bottom: 2px solid #ccc;
+}
+
+     /* margins */
+.mt-20{
+    margin-top: 20px;
+}
+.mt-30{
+    margin-top: 30px;
+}
+
+.mr-20{
+    margin-right: 20px;
+}
+.mr-30{
+    margin-right: 30px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.ml-20{
+    margin-left: 20px;
+}
+.ml-30{
+    margin-left: 30px;
+}
+
+.mx-20{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.mx-30{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.my-20{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.my-30{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.h-1{
+    height: 10%;
+}
+.h-2{
+    height: 20%;
+}
+.h-3{
+    height: 30%;
+}
+.h-4{
+    height: 40%;
+}
+.h-5{
+    height: 50%;
+}
+.h-6{
+    height: 60%;
+}
+.h-7{
+    height: 70%;
+}
+.h-8{
+    height: 80%;
+}
+.h-9{
+    height: 90%;
+}
+.h-10{
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 991px) and (max-width: 1199px) {
+
+     /*article  */
+   
+    .bankcards__card{
+        padding: 10px;
+    }
+    .bankcardone__balance{
+        font-size: 18px;
+    }
+    .bankcardone__currency{
+        font-size: 10px;
+    }
+    .bankcardtwo__icon{
+        width: 35px;
+        height: 35px;
+        font-size: 23px;
+        line-height: 36px;
+    }
+    .bankcardtwo__persent{
+        font-size: 14px;
+    }
+    .bankcardtwo__desc{
+        font-size: 10px;
+    }
+    .bankcardthree__title{
+        font-size: 35px;
+    }
+    .bankcardthree__number{
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    .bankcardthree__personal{
+        font-weight: bold;
+        font-size: 12px;
+    
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    /* main 
+            header
+    */
+    
+    .main__search{
+        width: 25%;
+    }
+    .main__search i{
+       font-size: 1.3rem;
+    }
+    .main__search input{
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+    .main-icon{
+        font-size: 1rem;
+    }
+
+
+     /*article  */
+ 
+    .bankcards{
+        justify-content: space-evenly;
+        gap: 30px;
+    }
+    .bankcards__card{
+        width: calc(45%);
+        padding: 10px;
+    }
+    .bankcardone__balance{
+        font-size: 18px;
+    }
+    .bankcardone__currency{
+        font-size: 10px;
+    }
+    .bankcardtwo__icon{
+        width: 35px;
+        height: 35px;
+        font-size: 23px;
+        line-height: 36px;
+    }
+    .bankcardtwo__persent{
+        font-size: 14px;
+    }
+    .bankcardtwo__desc{
+        font-size: 10px;
+    }
+    .bankcardthree__title{
+        font-size: 35px;
+    }
+    .bankcardthree__number{
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    .bankcardthree__personal{
+        font-weight: bold;
+        font-size: 12px;
+    
+    }
+
+
+            /* Graphics */
+
+
+    .transactions{
+        padding: 15px 0;
+    }
+    .transaction{
+        height: 70px;
+        gap: 5px;
+    }
+    .transaction__title{
+        font-size: 10px;
+    }
+    .transaction__count{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .transaction__month{
+        font-size: 10px;
+    }
+    .gaph{
+        gap: 4px;
+    }
+
+    .graph__col{
+        width: 12px;
+        border-radius: 5px;
+    }
+
+
+
+        /* History payment */
+    .history--60{
+        width: 100%;
+    }
+    .history--40{
+        width: 100%;
+    }
+   
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+    main{
+        margin: 0;
+    }
+    .help{
+        display: none;
+    }
+
+    .aside{
+        transform: translateX(-200px);
+        transition: all 0.5s ease-out;
+        z-index: 1;
+    }
+    .burger{
+        transition: 0.6s ease-in;
+        display: block;
+        position: fixed;
+        border-radius: 5px;
+        left: 10px;
+        top: 10px;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .burger__line{
+        width: 30px;
+        height: 3px;
+        background-color: var(--textcolor-violet);
+        margin: 8px auto;   
+        transition: all 0.5s ease-in;
+    }
+    /* animation */
+    .aside--open{
+        transform: none;
+        width: 100%;
+    }
+    .burger--open{
+        left: calc(100% - 55px);
+        z-index: 2;
+        opacity: 100%;
+        transform: rotateZ(90deg);
+        transition: left .6s ease-out , transform .6s ease-out;
+    }
+    .burger__line--open{
+        background-color: var(--textcolor-violet);
+    }
+    .burger__line--open:first-child{
+        transform-origin: left;
+        transform: rotateZ(45deg);
+    }
+    .burger__line--open:nth-child(2){
+        background-color: transparent;
+    }
+    .burger__line--open:last-child{
+        transform-origin: left;
+        transform: rotateZ(-45deg);
+    }
+        /* aside */
+  
+    .aside__icon{
+        font-size: 3rem;
+    }
+    .aside__title{
+        font-size: 25px;
+    }
+    .nav__title{
+        font-size: 17px;
+    }
+    .nav__link i{
+        font-size: 30px;
+    }
+    .nav__text{
+        font-size: 17px;
+    }
+    .nav__arrow{
+        font-size: 20px;
+    }
+
+    /* main 
+            header
+    */
+    .container{
+        padding: 20px;
+    }
+
+    .main__header{
+        flex-direction: column-reverse;
+        gap: 20px;
+        padding-bottom: 70px;
+    }
+    .main__search{
+        width: 70%;
+    }
+    .main__search i{
+       font-size: 1.3rem;
+    }
+    .main__search input{
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+    .main__icons{
+        display: none;
+    }
+    .links{
+        display: none;
+    }
+    .user{
+        width: 100px;
+        align-self: center;
+    }
+    .user__greetings{
+        font-size: 12px;
+    }
+ 
+        /* article */
+    .bankcards{
+        justify-content: space-evenly;
+        gap: 30px;
+    }
+    .bankcards__card{
+        width: calc(90%);
+        padding: 20px;
+    }
+    .bankcards__title{
+        font-size: 2.5vw;
+    }
+    .bankcardone__balance{
+        font-size: 5vw;
+    }
+    .bankcardone__currency{
+        font-size: 2vw;
+    }
+    .bankcardtwo__icon{
+        width: 12vw;
+        height: 12vw;
+        font-size: 6vw;
+        line-height: 12vw;
+    }
+    .bankcardtwo__persent{
+        font-size: 4vw;
+    }
+    .bankcardtwo__desc{
+        font-size: 3vw;
+    }
+    .bankcardthree__title{
+        font-size: 10vw;
+    }
+    .bankcardthree__number{
+        font-size: calc(6vw - 7px);
+        letter-spacing: 3px;
+    }
+    .bankcardthree__text{
+        font-size: 2.5vw;
+    }
+    .bankcardthree__personal{
+        font-weight: bold;
+        font-size: 4vw;
+    
+    }
+
+
+        /* Graphics */
+    .transactions{
+        padding: 15px 0;
+        gap: 20px;
+    }
+    .transaction{
+       width: 100%;
+       gap: 5px;
+    }
+    .transaction__title{
+        font-size: 10px;
+    }
+    .transaction__count{
+        font-size: 16px;
+    }
+    .transaction__month{
+        font-size: 10px;
+    }
+    .gaph{
+        gap: 4px;
+    }
+
+    .graph__col{
+        width: 12px;
+    }
+
+
+        /* History payment */
+    .history--60{
+        width: 100%;
+    }
+    .history--40{
+        width: 100%;
+    }
+    .history__title{
+        font-size: 12px;
+    }
+    .history__icons{
+        font-size: 1.1rem;
+        gap: 10px;
+    }
+    .history__date{
+        font-size: 10px;
+    }
+    .action__icon{
+        width: 40px;
+        height: 40px;
+    }
+    .action__origin{
+        font-size: 12px;
+    }
+    .action__status{
+        font-size: 12px;
+    }
+    .action__money{
+        font-size: 12px;
+    }
+    
+}

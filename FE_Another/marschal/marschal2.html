@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+       
+<style>
+    body {
+  padding: 45px;
+  background: rgb(109, 99, 96);
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100% - 90px);
+  gap: 30px;
+}
+
+.item1 {
+  background: rgb(113, 213, 181);
+  flex: 0.9;
+}
+
+.item2 {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.item2_1 {
+  background: rgb(113, 213, 181);
+  flex: 1;
+}
+
+.item2_2 {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.item2_2_1 {
+  background: rgb(113, 213, 181);
+  flex: 1;
+}
+
+.item2_2_2 {
+  background: rgb(113, 213, 181);
+  flex: 1;
+}
+
+.item2_3 {
+  background: rgb(113, 213, 181);
+  flex: 1;
+}
+</style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item1"></div>
+            <div class="item2">
+                <div class="item2_1"></div>
+                <div class="item2_2">
+                    <div class="item2_2_1"></div>
+                    <div class="item2_2_2"></div>
+                </div>
+                <div class="item2_3"></div>
+
+            </div>
+        </div>
+    </body>
+</html>

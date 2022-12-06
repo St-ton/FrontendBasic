@@ -1,0 +1,1427 @@
+:root {
+    /* 1-mode */
+    /* colors */
+    --colorViolet-main: #3453c4;
+    --colorWhite: #fff;
+    --colorGray-light: #f3f5f7;
+    --colorGray-medium: #e3e5ec;
+    --colorGray-dark: #8c909a;
+    --colorRed: #ff5f37;
+    --colorGreen: #5ace61;
+    --colorGrad-1: #f4f6f8;
+    --colorGrad-2: #fff;
+    --colorPr-1: #ff5e00;
+    --colorPr-2: #2f82da;
+    --colorPr-3: #8c00ff;
+    --colorPr-4: #63bb95;
+    --colorText-main: #1b1b1b;
+
+    /*fonts*/
+    --fontSize-xxl: 45px;
+    --fontSize-xl: 30px;
+    --fontSize-lg: 20px;
+    --fontSize-md: 15px;
+    --fontSize-sm: 12px;
+    --fontSize-xs: 10px;
+
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: inherit;
+    border: none;
+    text-decoration: inherit;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+
+
+html,
+body {
+    height: 100%;
+    color: var(--colorText-main);
+}
+
+.burger {
+    display: none;
+}
+
+.wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 220px 350px 1fr 80px;
+    grid-template-areas:
+        "sidebar inbox chat panel"
+    ;
+
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.inbox {
+    grid-area: inbox;
+}
+
+.chat {
+    grid-area: chat;
+}
+
+.panel {
+    grid-area: panel;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*              
+ .d8888b. 8888888 8888888b.  8888888888 888888b.         d8888 8888888b.  
+d88P  Y88b  888   888  "Y88b 888        888  "88b       d88888 888   Y88b 
+Y88b.       888   888    888 888        888  .88P      d88P888 888    888 
+ "Y888b.    888   888    888 8888888    8888888K.     d88P 888 888   d88P 
+    "Y88b.  888   888    888 888        888  "Y88b   d88P  888 8888888P"  
+      "888  888   888    888 888        888    888  d88P   888 888 T88b   
+Y88b  d88P  888   888  .d88P 888        888   d88P d8888888888 888  T88b  
+ "Y8888P" 8888888 8888888P"  8888888888 8888888P" d88P     888 888   T88b
+*/
+/* 
+_  _ ____ ____ ___  ____ ____ 
+|__| |___ |__| |  \ |___ |__/ 
+|  | |___ |  | |__/ |___ |  \ 
+
+*/
+.sidebar {
+    background-color: var(--colorGray-light);
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+}
+
+.sidebar__header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sidebar__icon {
+    color: var(--colorViolet-main);
+    font-size: var(--fontSize-xxl);
+}
+
+.sidebar__title {
+    font-size: var(--fontSize-lg);
+}
+
+/* 
+_  _ ____ _  _ 
+|\ | |__| |  | 
+| \| |  |  \/  
+               
+ */
+.nav__link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 10px;
+    border-right: 5px solid transparent;
+    border-radius: 10px 3px 3px 10px;
+    margin-left: -10px;
+    color: var(--colorGray-dark);
+}
+
+/* mod ///////------------------------------ */
+.nav__link-active {
+    border-right: 5px solid var(--colorRed);
+    background: linear-gradient(90deg, var(--colorGrad-2) 50%, transparent);
+    color: var(--colorViolet-main);
+}
+
+.nav__link-active>.nav__text {
+    color: var(--colorViolet-main);
+}
+
+/* mod ------------------------------/////// */
+
+.nav__icon {
+    font-size: var(--fontSize-lg);
+}
+
+.nav__text {
+    font-size: var(--fontSize-md);
+    color: var(--colorText-main);
+}
+
+.nav__link:hover {
+    border-right: 5px solid var(--colorRed);
+    background: linear-gradient(90deg, var(--colorGrad-2) 50%, transparent);
+    color: var(--colorViolet-main);
+}
+
+.nav__link:hover .nav__text {
+    color: var(--colorViolet-main);
+}
+
+
+
+/* 
+___  ____ ____  _ ____ ____ ___ ____ 
+|__] |__/ |  |  | |___ |     |  [__  
+|    |  \ |__| _| |___ |___  |  ___] 
+                                     
+ */
+.projects__title {
+    font-size: var(--fontSize-xs);
+    text-transform: uppercase;
+    color: var(--colorGray-dark);
+    margin-bottom: 20px;
+}
+
+.projects__itom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects__icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 7px;
+}
+
+/* mod ///////------------------------------ */
+.projects__icon-red {
+    border: 2px solid var(--colorPr-1);
+}
+
+.projects__icon-blue {
+    border: 2px solid var(--colorPr-2);
+}
+
+.projects__icon-violet {
+    border: 2px solid var(--colorPr-3);
+}
+
+.projects__icon-green {
+    border: 2px solid var(--colorPr-4);
+}
+
+/* mod -------------------------------/////// */
+
+.projects__link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-block: 10px;
+}
+
+.projects__text {
+    font-size: var(--fontSize-sm);
+}
+
+.projects__counter {
+    background-color: var(--colorGray-medium);
+    font-size: var(--fontSize-xs);
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--colorGray-dark);
+    border-radius: 5px;
+}
+
+/* 
+___  _  _ ___ ___ ____ _  _ 
+|__] |  |  |   |  |  | |\ | 
+|__] |__|  |   |  |__| | \| 
+                            
+ */
+.button {
+    /* line-height: 36px; */
+    border-radius: 10px;
+    border: 1px solid var(--colorGray-medium);
+    cursor: pointer;
+    height: 36px;
+}
+.button:hover {
+  background-color: var(--colorViolet-main);
+  color: var(--colorWhite);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+8888888 888b    888 888888b.    .d88888b. Y88b   d88P 
+  888   8888b   888 888  "88b  d88P" "Y88b Y88b d88P  
+  888   88888b  888 888  .88P  888     888  Y88o88P   
+  888   888Y88b 888 8888888K.  888     888   Y888P    
+  888   888 Y88b888 888  "Y88b 888     888   d888b    
+  888   888  Y88888 888    888 888     888  d88888b   
+  888   888   Y8888 888   d88P Y88b. .d88P d88P Y88b  
+8888888 888    Y888 8888888P"   "Y88888P" d88P   Y88b 
+*/
+/* 
+_  _ ____ ____ ___  ____ ____ 
+|__| |___ |__| |  \ |___ |__/ 
+|  | |___ |  | |__/ |___ |  \ 
+
+*/
+.inbox {
+    border-right: 2px solid var(--colorGray-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.inbox__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inbox__title {
+    font-size: var(--fontSize-xl);
+}
+
+.inbox__button {
+    aspect-ratio: 1;
+    font-size: var(--fontSize-lg);
+    font-weight: 300;
+}
+
+/* 
+_ _  _ ___  ____ _  _         ___ ____ ____ ____ _    ____ 
+| |\ | |__] |  |  \/           |  |  | | __ | __ |    |___ 
+| | \| |__] |__| _/\_ ___ ___  |  |__| |__] |__] |___ |___ 
+                                                           
+ */
+.inbox__toggle {
+    background-color: var(--colorGray-light);
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    padding: 4px;
+}
+
+.toggle__button {
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    color: var(--colorGray-dark);
+    cursor: pointer;
+}
+
+.toggle__active {
+    background-color: var(--colorWhite);
+    color: var(--colorText-main);
+}
+
+/* 
+_ _  _ ___  ____ _  _         ____ ____ _  _ ___ ____ ____ ____ 
+| |\ | |__] |  |  \/          |    |  | |\ |  |  |__| |    [__  
+| | \| |__] |__| _/\_ ___ ___ |___ |__| | \|  |  |  | |___ ___] 
+                                                                
+ */
+.inbox__contacts {
+    overflow-y: scroll;
+    flex: 1 1 10vh;
+}
+
+.inbox__contacts:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px -80px 150px var(--colorWhite);
+    z-index: 0;
+}
+
+.contactbox__card {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--colorGray-light);
+    height: 100px;
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.contactbox__avatar {
+    height: 100%;
+    margin-right: 15px;
+}
+
+.contactbox__avatar img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.contactbox__info {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1;
+}
+
+.contactbox__uname {
+    font-size: var(--fontSize-md);
+}
+
+.contactbox__position,
+.contactbox__msg {
+    font-size: var(--fontSize-sm);
+}
+
+.contactbox__position {
+    color: var(--colorGray-dark);
+}
+
+.contactbox__unread {
+    background-color: var(--colorViolet-main);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    color: var(--colorWhite);
+    font-size: var(--fontSize-sm);
+    display: none;
+}
+
+
+
+
+/* mod */
+.contactbox__card-unread .contactbox__unread {
+    display: block;
+}
+
+/* mod */
+.contactbox__card-unread {
+    background-color: var(--colorGray-light);
+    border-radius: 20px;
+}
+
+.contactbox__card-selected {
+    background-color: var(--colorGray-medium);
+    border-radius: 20px;
+    border-bottom: 2px solid transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+ .d8888b.  888    888        d8888 88888888888 
+d88P  Y88b 888    888       d88888     888     
+888    888 888    888      d88P888     888     
+888        8888888888     d88P 888     888     
+888        888    888    d88P  888     888     
+888    888 888    888   d88P   888     888     
+Y88b  d88P 888    888  d8888888888     888     
+ "Y8888P"  888    888 d88P     888     888   
+ */
+.chat {
+    border-right: 2px solid var(--colorGray-light);
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(292deg, var(--colorGrad-1) 47%, var(--colorGrad-2) 75%);
+}
+
+/* 
+____ _  _ ____ ___         _  _ ____ ____ ___  ____ ____ 
+|    |__| |__|  |          |__| |___ |__| |  \ |___ |__/ 
+|___ |  | |  |  |  ___ ___ |  | |___ |  | |__/ |___ |  \ 
+                                                         
+ */
+.chat__header {
+    border-bottom: 2px solid var(--colorGray-light);
+    background-color: var(--colorWhite);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat__contact {
+    display: flex;
+    align-items: center;
+}
+
+#chat__avatar {
+    height: 45px;
+    width: 45px;
+    margin-right: 15px;
+}
+
+#chat__avatar img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.chat__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.chat__uname {
+    font-size: var(--fontSize-md);
+}
+
+.chat__isonline {
+    font-size: var(--fontSize-sm);
+    color: var(--colorGray-dark);
+}
+
+.chat__menu {
+    display: flex;
+    gap: 15px;
+}
+
+.contactmenu {
+    display: none;
+}
+
+.chat__search {
+    background-color: var(--colorGray-light);
+    line-height: 36px;
+    border-radius: 10px;
+    padding-inline: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.chat__input {
+    color: var(--colorText-main);
+}
+
+.chat__icon {
+    transform: rotateY(180deg);
+    color: var(--colorGray-dark);
+    font-size: var(--fontSize-lg);
+}
+
+.chat__button {
+    aspect-ratio: 1;
+    font-size: var(--fontSize-lg);
+    color: var(--colorGray-dark);
+}
+
+/* 
+____ _  _ ____ ___         ___  _ ____ _    ____ ____ 
+|    |__| |__|  |          |  \ | |__| |    |  | | __ 
+|___ |  | |  |  |  ___ ___ |__/ | |  | |___ |__| |__] 
+                                                      
+ */
+.dialog {
+    overflow-y: scroll;
+    flex: 1 1 10vh;
+    margin-inline: 30px;
+    padding-bottom: 70px;
+}
+
+.dialog__date {
+    font-size: var(--fontSize-md);
+    color: var(--colorGray-dark);
+    display: block;
+    margin-block: 10px;
+}
+
+.dialog__msg {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog__time,
+.dialog__status {
+    font-size: var(--fontSize-xs);
+    color: var(--colorGray-dark);
+    margin-block: 10px;
+}
+
+.dialog__text {
+    font-size: var(--fontSize-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog__item {
+    padding: 10px;
+    margin-block: 10px;
+}
+
+
+/* mod msg sent */
+.dialog__msg-sent {
+    margin-left: auto;
+    align-items: flex-end;
+}
+
+.dialog__msg-sent .dialog__text {
+    align-items: flex-end;
+}
+
+.dialog__msg-sent .dialog__item {
+    background: var(--colorWhite);
+    border-radius: 10px 10px 0 10px;
+}
+
+/* mod msg sent */
+.dialog__msg-received .dialog__text {
+    align-items: flex-start;
+}
+
+.dialog__msg-received .dialog__item {
+    background: var(--colorGray-medium);
+    border-radius: 10px 10px 10px 0;
+}
+
+.dialog__msg-received .dialog__status {
+    visibility: hidden;
+}
+
+/* 
+____ _  _ ____ ___         ___ _   _ ___  _ _  _ ____ 
+|    |__| |__|  |           |   \_/  |__] | |\ | | __ 
+|___ |  | |  |  |  ___ ___  |    |   |    | | \| |__] 
+                                                      
+ */
+.chat__typing {
+    height: 80px;
+    border-top: 1px solid var(--colorGray-medium);
+    margin-inline: 30px;
+}
+
+.typing {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 15px;
+    gap: 10px;
+}
+
+.typing__input {
+    flex: 1 1;
+    height: 36px;
+}
+
+.typing__button {
+    aspect-ratio: 1;
+    background-color: var(--colorGray-medium);
+    font-size: var(--fontSize-lg);
+    color: var(--colorGray-dark);
+}
+
+.typing__button-violet {
+    background-color: var(--colorViolet-main);
+    color: var(--colorWhite);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+8888888b.     d8888 888b    888 8888888888 888      
+888   Y88b   d88888 8888b   888 888        888      
+888    888  d88P888 88888b  888 888        888      
+888   d88P d88P 888 888Y88b 888 8888888    888      
+8888888P" d88P  888 888 Y88b888 888        888      
+888      d88P   888 888  Y88888 888        888      
+888     d8888888888 888   Y8888 888        888      
+888    d88P     888 888    Y888 8888888888 88888888 
+*/
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--colorGray-dark);
+}
+
+.panel__bottom .panel__button {
+    font-size: var(--fontSize-lg);
+}
+
+.panel__button {
+    aspect-ratio: 1;
+    font-size: var(--fontSize-xl);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  
+888b     d888  .d88888b.  888888b.   8888888 888      8888888888 
+8888b   d8888 d88P" "Y88b 888  "88b    888   888      888        
+88888b.d88888 888     888 888  .88P    888   888      888        
+888Y88888P888 888     888 8888888K.    888   888      8888888    
+888 Y888P 888 888     888 888  "Y88b   888   888      888        
+888  Y8P  888 888     888 888    888   888   888      888        
+888   "   888 Y88b. .d88P 888   d88P   888   888      888        
+888       888  "Y88888P"  8888888P"  8888888 88888888 8888888888 
+*/
+
+
+@media (max-width: 1200px) and (min-width: 200px) {
+
+    .wrapper {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 300px 1fr 80px;
+        grid-template-areas:
+            "inbox chat panel"
+        ;
+
+    }
+    .sidebar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 220px;
+        height: 100%;
+        transform: translate(-220px);
+    }
+
+    .burger {
+        display: block;
+        position: fixed;
+        border-radius: 5px;
+        left: 10px;
+        top: 3px;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .burger__line {
+        width: 30px;
+        height: 3px;
+        background-color: var(--colorViolet-main);
+        margin: 6px auto;
+    }
+
+    .burger--open {
+        left: 190px;
+        transform: rotateZ(90deg);
+    }
+
+    .sidebar--open {
+        transform: none;
+    }
+
+    .burger__line--open:first-child {
+        /* transform-origin: left; */
+        transform: translateY(18px) rotateZ(45deg);
+        z-index: 3;
+    }
+
+    .burger__line--open:nth-child(2) {
+        background-color: transparent;
+    }
+
+    .burger__line--open:last-child {
+        /* transform-origin: left; */
+        transform: rotateZ(-45deg);
+    }
+
+}
+
+
+
+
+
+
+@media (max-width: 925px) and (min-width: 10px) {
+
+
+    .wrapper {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+            "inbox chat"
+        ;
+    }
+    .panel {
+        display: none;
+    }
+
+    .chat__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding-block: 15px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 725px) and (min-width: 10px) {
+
+
+    .wrapper {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "inbox"
+        ;
+    }
+    .chat {
+        display: none;
+    }
+
+    .chat__input,
+    .typing__input {
+        width: 100px;
+    }
+
+    .contactmenu {
+        display: block;
+
+    }
+
+    .chat__back {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "chat"
+        ;
+    }
+
+    .chat__back .chat {
+        display: flex;
+    }
+
+    .chat__back .inbox {
+        display: none;
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+888b     d888  .d88888b.  8888888b.  
+8888b   d8888 d88P" "Y88b 888  "Y88b 
+88888b.d88888 888     888 888    888 
+888Y88888P888 888     888 888    888 
+888 Y888P 888 888     888 888    888 
+888  Y8P  888 888     888 888    888 
+888   "   888 Y88b. .d88P 888  .d88P 
+888       888  "Y88888P"  8888888P"                                
+ */
+
+
+.user-online {
+    position: relative;
+}
+
+.user-online::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 8px;
+    border-radius: 50%;
+    border: 3px solid var(--colorWhite);
+    aspect-ratio: 1;
+    background-color: var(--colorGreen);
+    z-index: 1;
+}
+
+
+
+.m-0 {
+    margin: 0;
+}
+
+.m-5 {
+    margin: 5px;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.m-15 {
+    margin: 15px;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.m-25 {
+    margin: 25px;
+}
+
+.m-30 {
+    margin: 30px;
+}
+
+.mx-0 {
+    margin-inline: 0px;
+}
+
+.mx-5 {
+    margin-inline: 5px;
+}
+
+.mx-10 {
+    margin-inline: 10px;
+}
+
+.mx-15 {
+    margin-inline: 15px;
+}
+
+.mx-20 {
+    margin-inline: 20px;
+}
+
+.mx-25 {
+    margin-inline: 25px;
+}
+
+.mx-30 {
+    margin-inline: 30px;
+}
+
+.my-0 {
+    margin-block: 0px;
+}
+
+.my-5 {
+    margin-block: 5px;
+}
+
+.my-10 {
+    margin-block: 10px;
+}
+
+.my-15 {
+    margin-block: 15px;
+}
+
+.my-20 {
+    margin-block: 20px;
+}
+
+.my-25 {
+    margin-block: 25px;
+}
+
+.my-30 {
+    margin-block: 30px;
+}
+
+.mt-0 {
+    margin-top: 0px;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mr-0 {
+    margin-right: 0px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.mr-25 {
+    margin-right: 25px;
+}
+
+.mr-30 {
+    margin-right: 30px;
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.ml-0 {
+    margin-left: 0px;
+}
+
+.ml-5 {
+    margin-left: 5px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.ml-15 {
+    margin-left: 15px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.ml-25 {
+    margin-left: 25px;
+}
+
+.ml-30 {
+    margin-left: 30px;
+}
+
+
+
+
+
+
+.p-0 {
+    padding: 0;
+}
+
+.p-5 {
+    padding: 5px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.p-25 {
+    padding: 25px;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.px-0 {
+    padding-inline: 0px;
+}
+
+.px-5 {
+    padding-inline: 5px;
+}
+
+.px-10 {
+    padding-inline: 10px;
+}
+
+.px-15 {
+    padding-inline: 15px;
+}
+
+.px-20 {
+    padding-inline: 20px;
+}
+
+.px-25 {
+    padding-inline: 25px;
+}
+
+.px-30 {
+    padding-inline: 30px;
+}
+
+.py-0 {
+    padding-block: 0px;
+}
+
+.py-5 {
+    padding-block: 5px;
+}
+
+.py-10 {
+    padding-block: 10px;
+}
+
+.py-15 {
+    padding-block: 15px;
+}
+
+.py-20 {
+    padding-block: 20px;
+}
+
+.py-25 {
+    padding-block: 25px;
+}
+
+.py-30 {
+    padding-block: 30px;
+}
+
+.pt-0 {
+    padding-top: 0px;
+}
+
+.pt-5 {
+    padding-top: 5px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pt-15 {
+    padding-top: 15px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.pt-25 {
+    padding-top: 25px;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.pr-0 {
+    padding-right: 0px;
+}
+
+.pr-5 {
+    padding-right: 5px;
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+.pr-15 {
+    padding-right: 15px;
+}
+
+.pr-20 {
+    padding-right: 20px;
+}
+
+.pr-25 {
+    padding-right: 25px;
+}
+
+.pr-30 {
+    padding-right: 30px;
+}
+
+.pb-0 {
+    padding-bottom: 0px;
+}
+
+.pb-5 {
+    padding-bottom: 5px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.pb-15 {
+    padding-bottom: 15px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.pb-25 {
+    padding-bottom: 25px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.pl-0 {
+    padding-left: 0px;
+}
+
+.pl-5 {
+    padding-left: 5px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pl-15 {
+    padding-left: 15px;
+}
+
+.pl-20 {
+    padding-left: 20px;
+}
+
+.pl-25 {
+    padding-left: 25px;
+}
+
+.pl-30 {
+    padding-left: 30px;
+}

@@ -1,0 +1,122 @@
+:root {
+  --aside-width: 250px;
+  --aside-mob-width: 250px;
+  --inbox-width: 350px;
+  --inbox-mob-width: 250px;
+  --panel-width: 50px;
+  --span-heigth: 20px;
+  --inbox-item-heigth: 80px;
+  --message-height: 40px;
+  --title-wrp: 60px;
+  --chat-header-wrp: 80px;
+  --chat-footer-wrp: 80px;
+  --gray-normal: #dde6f0;
+  --gray-light: #f3f5f6;
+  --gray-dark: #717173;
+  --dark-text: #343336;
+  --light-text: #f3f5f6;
+  --hover-blue: #7289de;
+  --icon-white: white;
+  --hover-red: #f86241;
+}
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
+body,
+main,
+aside,
+.panel {
+  height: 100%;
+}
+html {
+  background: var(--gray-dark);
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: var(--aside-width) var(--inbox-width) auto var(--panel-width);
+  /* grid-template-columns: 200px 250px auto 50px; */
+  grid-template-areas: 'aside inbox main panel';
+  height: 100%;
+}
+
+aside {
+  grid-area: aside;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  background: var(--gray-light);
+  width: var(--aside-width);
+  border-radius: 30px 0 0 30px;
+}
+.inbox {
+  grid-area: inbox;
+  /* position: fixed; */
+  border-right: 1px solid var(--gray-light);
+  width: var(--inbox-width);
+  height: 100%;
+  padding: 10px 25px;
+  background: white;
+  transition: all 0.5s ease-out;
+  z-index: 0;
+  overflow-y: scroll;
+}
+main {
+  grid-area: main;
+  display: flex;
+  top: 0;
+  /* margin-left: var(--aside-width); */
+  /* width: calc(100% - var(--aside-width)); */
+  height: 100%;
+  overflow-y: scroll;
+}
+main::-webkit-scrollbar {
+  display: none;
+}
+.chat {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-90deg, var(--gray-light), white);
+  border-right: 2px solid var(--gray-normal);
+}
+.panel {
+  grid-area: panel;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* width: var(--panel-width); */
+  border-radius: 0 30px 30px 0;
+  background: white;
+  padding: 0px 5px 40px;
+  gap: 20px;
+}
+.panel__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--icon-white);
+  padding: 4px;
+  border: 1px solid var(--gray-dark);
+  border-radius: 25%;
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
+.panel__icon:hover {
+  cursor: pointer;
+  color: var(--icon-white);
+  background: var(--hover-blue);
+  box-shadow: 1px 1px var(--gray-dark);
+  transition: 0.3s;
+}

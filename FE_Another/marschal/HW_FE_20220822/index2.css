@@ -1,0 +1,57 @@
+body {
+    padding: 45px;
+    background: rgb(109, 99, 96);
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% - 90px);
+    gap: 30px;
+}
+
+.item1 {
+    background: rgb(113, 213, 181);
+    flex: 0.9;
+}
+
+.item2 {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+
+.item2_1 {
+    background: rgb(113, 213, 181);
+    flex: 1;
+}
+
+.item2_2 {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+}
+
+.item2_2_1 {
+    background: rgb(113, 213, 181);
+    flex: 1;
+}
+
+.item2_2_2 {
+    background: rgb(113, 213, 181);
+    flex: 1;
+}
+
+.item2_3 {
+    background: rgb(113, 213, 181);
+    flex: 1;
+}

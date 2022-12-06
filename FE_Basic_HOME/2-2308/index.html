@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Twitttter App</title>
+
+  <style>
+    .card {
+      background: rgb(241 241 254);
+      padding: 1rem 2rem;
+      width: 80%;
+      border-radius: 12px;
+      border: 1px solid #dfdfdf;
+
+    }
+
+    .card__name,
+    .card__user {
+      display: flex;
+
+    }
+
+    .card__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+
+    .card__avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      transition: 0.5s;
+    }
+
+    .card__avatar:hover {
+      transform: scale(1.15);
+      margin-right: 20px;
+      
+    }
+
+    .card__avatar:hover+.card__name {
+      color: red;
+    }
+
+    .card__date {
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- БЭМ: Блок__Элемент--Модификатор -->
+     <div class="card">
+    <div class="card__header">
+
+      <div class="card__user">
+        <img class="card__avatar" src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+        <h2 class="card__name ">Ivanov Ivan</h2>
+      </div>
+
+      <span class="card__date"> Aug 23, 2022 </span>
+    </div>
+
+    <div class="card__content">
+      <p class="card__message">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+        quibusdam porro ipsa facilis dolores neque rerum esse dicta mollitia
+        dolore inventore perspiciatis unde id, distinctio beatae odit vel
+        voluptas soluta!
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>

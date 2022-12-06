@@ -1,0 +1,40 @@
+body {
+    padding: 15px;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% - 30px);
+    gap: 15px;
+}
+
+.item1 {
+    background: rgb(255, 77, 166);
+    flex: 1;
+    min-width: 100%;
+}
+
+.item2 {
+    background: rgb(255, 3, 126);
+    min-width: calc(70% - 15px);
+    min-height: 50%;
+}
+
+.item3 {
+    background: rgb(206, 4, 104);
+    min-width: 30%;
+    min-height: 50%;
+}
+
+.item4 {
+    background: rgb(128, 39, 85);
+    flex: 1;
+    min-width: 100%;
+}
